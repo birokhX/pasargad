@@ -5,11 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ستارگان پیشرو | بیمه پاسارگاد</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./styles/app.css">
 </head>
 
 <body>
     <svg class="hidden">
+        <!-- Check Circle -->
+        <symbol id="check-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <circle cx="12" cy="12" r="8"></circle>
+            <path d="M9 12L11 14L15 10" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                fill="none"></path>
+        </symbol>
+        <!-- Minus -->
+        <symbol id="minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 13H5V11H19V13Z"></path>
+        </symbol>
         <!-- Twitter -->
         <symbol id="twitter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
             <path
@@ -276,124 +287,123 @@
         </div>
     </header>
 
-    <!-- Nav Mobile -->
-    <div class="shadow">
+    <!-- Mobile Navbar -->
+    <div class="shadow fixed top-0 left-0 right-0 bg-white z-10 lg:hidden">
         <div class="container px-4 lg:px-8 mx-auto h-20 ">
-            <div class="flex justify-between lg:hidden items-center h-full">
+            <div class="flex justify-between items-center h-full">
                 <!-- Bars 3 -->
                 <div class="cursor-pointer open-nav-mobile-btn">
                     <svg class="w-5 h-5">
                         <use href="#bars-3"></use>
                     </svg>
                 </div>
-                <!-- Mobile Nav -->
-                <div
-                    class="nav-mobile fixed top-0 bottom-0 -right-64 z-20 my-2 w-64 bg-white py-4 p-3 rounded-2xl shadow-lg transition-all duration-500">
-                    <!-- Nav Header -->
-                    <div class="flex justify-between items-center pb-5 mb-5 border-b border-gray-100">
-                        <div class="flex items-center gap-x-2">
-                            <img src="./images/pasargad/Logo-removebg-preview.png" alt="لوگو" title="بیمه پاسارگاد"
-                                class="w-8 h-8" loading="lazy">
-                            <div class="flex flex-col">
-                                <span class="text-sm font-bold text-zinc-800">ستارگان پیشرو</span>
-                                <span class="text-xs text-blue-700 leading-3">بیمه پاسارگاد</span>
-                            </div>
-                        </div>
-                        <div class="close-nav-mobile-btn bg-red-50 text-red-400 rounded-md">
-                            <svg class="w-5 h-5">
-                                <use href="#x-mark"></use>
-                            </svg>
-                        </div>
-                    </div>
-                    <!-- Nav Body -->
-                    <div class="">
-                        <!-- Menu -->
-                        <div
-                            class="flex flex-col space-y-2 text-sm bg-gray-50 p-2 rounded-2xl text-zinc-700 child:py-2 child:px-2">
-                            <a href="#" class="flex items-center justify-between gap-x-1">
-                                <span class="flex items-center gap-x-2">
-                                    <svg class="w-4 h-4">
-                                        <use href="#home"></use>
-                                    </svg>
-                                    <span>خانه</span>
-                                </span>
-                                <svg class="w-4 h-4">
-                                    <use href="#chevron-left"></use>
-                                </svg>
-                            </a>
-                            <a href="#" class="flex items-center justify-between gap-x-1 ">
-                                <span class="flex items-center gap-x-2">
-                                    <svg class="w-4 h-4">
-                                        <use href="#user-shield"></use>
-                                    </svg>
-                                    <span>مدیران</span>
-                                </span>
-                                <svg class="w-4 h-4">
-                                    <use href="#chevron-left"></use>
-                                </svg>
-                            </a>
-                            <a href="#" class="flex items-center justify-between gap-x-1 ">
-                                <span class="flex items-center gap-x-2">
-                                    <svg class="w-4 h-4">
-                                        <use href="#notebook"></use>
-                                    </svg>
-                                    <span>انواع بیمه</span>
-                                </span>
-                                <svg class="w-4 h-4">
-                                    <use href="#chevron-left"></use>
-                                </svg>
-                            </a>
-                            <a href="#" class="flex items-center justify-between gap-x-1 ">
-                                <span class="flex items-center gap-x-2">
-                                    <svg class="w-4 h-4">
-                                        <use href="#team"></use>
-                                    </svg>
-                                    <span>نمایندگان</span>
-                                </span>
-                                <svg class="w-4 h-4">
-                                    <use href="#chevron-left"></use>
-                                </svg>
-                            </a>
-                            <a href="#" class="flex items-center justify-between gap-x-1 ">
-                                <span class="flex items-center gap-x-2">
-                                    <svg class="w-4 h-4">
-                                        <use href="#information-circle"></use>
-                                    </svg>
-                                    <span>درباره ما</span>
-                                </span>
-                                <svg class="w-4 h-4">
-                                    <use href="#chevron-left"></use>
-                                </svg>
-                            </a>
-                            <a href="#" class="flex items-center justify-between gap-x-1 ">
-                                <span class="flex items-center gap-x-2">
-                                    <svg class="w-4 h-4">
-                                        <use href="#contact "></use>
-                                    </svg>
-                                    <span>تماس</span>
-                                </span>
-                                <svg class="w-4 h-4">
-                                    <use href="#chevron-left"></use>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 <!-- Logo/Title -->
-                <div class="flex gap-x-2">
-                    <img src="./images/pasargad/Logo-removebg-preview.png" alt="لوگو" class="w-10 h-10">
+                <div class="flex items-center gap-x-1">
+                    <img src="./images/pasargad/Logo-removebg-preview.png" alt="لوگو" class="w-15 h-15">
                     <div class="flex flex-col">
-                        <span class="text-lg font-bold text-zinc-800">ستارگان پیشرو</span>
-                        <span class="text-xs text-blue-700 leading-3">بیمه پاسارگاد</span>
+                        <span class="text-base font-bold text-zinc-800">ستارگان پیشرو</span>
+                        <span class="text-[0.6rem] text-blue-700 leading-3">بیمه پاسارگاد</span>
                     </div>
                 </div>
                 <!-- Register Button -->
                 <a href="#"
                     class="flex items-center gap-x-1 cursor-pointer text-sm text-white py-2 px-3 shadow-lg rounded-full bg-blue-700 transition-all hover:-translate-y-1 hover:shadow-blue-500/50">
-                    <svg class="w-5 h-5">
+                    <svg class="w-4 h-4">
                         <use href="#login"></use>
                     </svg>
-                    <span>ثبت نام</span>
+                    <span class="text-xs">ورود</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Mobile Nav Menu -->
+    <div
+        class="nav-mobile fixed top-0 bottom-0 -right-64 z-50 my-2 w-64 bg-white py-4 p-3 rounded-2xl shadow-lg transition-all duration-500">
+        <!-- Nav Header -->
+        <div class="flex justify-between items-center pb-5 mb-5 border-b border-gray-100">
+            <div class="flex items-center gap-x-2">
+                <img src="./images/pasargad/Logo-removebg-preview.png" alt="لوگو" title="بیمه پاسارگاد" class="w-8 h-8"
+                    loading="lazy">
+                <div class="flex flex-col">
+                    <span class="text-sm font-bold text-zinc-800">ستارگان پیشرو</span>
+                    <span class="text-xs text-blue-700 leading-3">بیمه پاسارگاد</span>
+                </div>
+            </div>
+            <div class="close-nav-mobile-btn bg-red-50 text-red-400 rounded-md">
+                <svg class="w-5 h-5">
+                    <use href="#x-mark"></use>
+                </svg>
+            </div>
+        </div>
+        <!-- Nav Body -->
+        <div class="">
+            <!-- Menu -->
+            <div class="flex flex-col space-y-2 text-sm bg-gray-50 p-2 rounded-2xl text-zinc-700 child:py-2 child:px-2">
+                <a href="#" class="flex items-center justify-between gap-x-1">
+                    <span class="flex items-center gap-x-2">
+                        <svg class="w-4 h-4">
+                            <use href="#home"></use>
+                        </svg>
+                        <span>خانه</span>
+                    </span>
+                    <svg class="w-4 h-4">
+                        <use href="#chevron-left"></use>
+                    </svg>
+                </a>
+                <a href="#" class="flex items-center justify-between gap-x-1 ">
+                    <span class="flex items-center gap-x-2">
+                        <svg class="w-4 h-4">
+                            <use href="#user-shield"></use>
+                        </svg>
+                        <span>مدیران</span>
+                    </span>
+                    <svg class="w-4 h-4">
+                        <use href="#chevron-left"></use>
+                    </svg>
+                </a>
+                <a href="#" class="flex items-center justify-between gap-x-1 ">
+                    <span class="flex items-center gap-x-2">
+                        <svg class="w-4 h-4">
+                            <use href="#notebook"></use>
+                        </svg>
+                        <span>انواع بیمه</span>
+                    </span>
+                    <svg class="w-4 h-4">
+                        <use href="#chevron-left"></use>
+                    </svg>
+                </a>
+                <a href="#" class="flex items-center justify-between gap-x-1 ">
+                    <span class="flex items-center gap-x-2">
+                        <svg class="w-4 h-4">
+                            <use href="#team"></use>
+                        </svg>
+                        <span>نمایندگان</span>
+                    </span>
+                    <svg class="w-4 h-4">
+                        <use href="#chevron-left"></use>
+                    </svg>
+                </a>
+                <a href="#" class="flex items-center justify-between gap-x-1 ">
+                    <span class="flex items-center gap-x-2">
+                        <svg class="w-4 h-4">
+                            <use href="#information-circle"></use>
+                        </svg>
+                        <span>درباره ما</span>
+                    </span>
+                    <svg class="w-4 h-4">
+                        <use href="#chevron-left"></use>
+                    </svg>
+                </a>
+                <a href="#" class="flex items-center justify-between gap-x-1 ">
+                    <span class="flex items-center gap-x-2">
+                        <svg class="w-4 h-4">
+                            <use href="#contact "></use>
+                        </svg>
+                        <span>تماس</span>
+                    </span>
+                    <svg class="w-4 h-4">
+                        <use href="#chevron-left"></use>
+                    </svg>
                 </a>
             </div>
         </div>
@@ -640,11 +650,11 @@
                     <div
                         class="relative py-8 lg:py-10 px-6 space-y-4 rounded-2xl border border-zinc-200 -z-10 transition-transform hover:-translate-y-2 hover:shadow-2xl/10 bg-white">
                         <!-- Header -->
-                        <div class="w-max mx-aut rounded-full overflow-hidden bg-white border border-zinc-200 absolute -top-10">
+                        <div
+                            class="w-max mx-aut rounded-full overflow-hidden bg-white border border-zinc-200 absolute -top-10">
                             <!-- Avatar -->
                             <img src="./images/avatars/9375451_avatars_accounts_man_male_people_icon.png" alt="کاربر"
-                                title="دکتر احد کریمی" class="w-20 h-20 lg:w-20 lg:h-20 object-cover"
-                                loading="lazy">
+                                title="دکتر احد کریمی" class="w-20 h-20 lg:w-20 lg:h-20 object-cover" loading="lazy">
                         </div>
                         <!-- Body -->
                         <div class="text-center">
@@ -657,7 +667,8 @@
                     <div
                         class="relative py-8 lg:py-10 px-6 space-y-4 rounded-2xl border border-zinc-200 -z-10 transition-transform hover:-translate-y-2 hover:shadow-2xl/10 bg-white">
                         <!-- Header -->
-                        <div class="w-max mx-aut rounded-full overflow-hidden bg-white border border-zinc-200 absolute -top-10 ">
+                        <div
+                            class="w-max mx-aut rounded-full overflow-hidden bg-white border border-zinc-200 absolute -top-10 ">
                             <!-- Avatar -->
                             <img src="./images/avatars/9375508_avatars_accounts_man_male_people_icon.png"
                                 alt="مهندس سارا حسینی" title="مهندس سارا حسینی"
@@ -673,11 +684,12 @@
                     <div
                         class="relative py-8 lg:py-10 px-6 space-y-4 rounded-2xl border border-zinc-200 -z-10 transition-transform hover:-translate-y-2 hover:shadow-2xl/10 bg-white">
                         <!-- Header -->
-                        <div class="w-max mx-aut rounded-full overflow-hidden bg-white border border-zinc-200 absolute -top-10 ">
+                        <div
+                            class="w-max mx-aut rounded-full overflow-hidden bg-white border border-zinc-200 absolute -top-10 ">
                             <!-- Avatar -->
                             <img src="./images/avatars/9375573_avatars_accounts_man_male_people_icon.png"
-                                alt="رضا محمدی" title="رضا محمدی"
-                                class="w-20 h-20 lg:w-20 lg:h-20 object-cover" loading="lazy">
+                                alt="رضا محمدی" title="رضا محمدی" class="w-20 h-20 lg:w-20 lg:h-20 object-cover"
+                                loading="lazy">
                         </div>
                         <!-- Body -->
                         <div class="text-center">
@@ -699,83 +711,197 @@
         </section>
 
         <!-- Footer -->
-        <footer class="mt-10 pt-14 pb-8 bg-gray-900">
+        <footer class="mt-10 pt-14 bg-zinc-700">
+            <!-- Container -->
             <div class="container mx-auto px-4 md:px-8">
                 <!-- Grid -->
-                <div class="grid grid-cols-1 lg:grid-cols-4 gap-y-8 gap-x-8 text-zinc-100">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-7 gap-y-10">
                     <!-- Column -->
-                    <div class="space-y-4">
-                        <h3 class="text-xl font-bold">ستارگان پیشرو</h3>
-                        <p class="text-sm text-zinc-200">ارائه بهترین خدمات بیمه و سرمایه‌گذاری با ۶۸ نوع بیمه‌نامه
-                            تخصصی و تیم مجرب.
-                        </p>
-                    </div>
-                    <!-- Column -->
-                    <div class="space-y-4">
-                        <h3 class="text-xl font-bold">دسترسی سریع</h3>
-                        <ul class="space-y-2 text-sm text-zinc-200">
-                            <li>
-                                <a href="#">درباره ما</a>
-                            </li>
-                            <li>
-                                <a href="#">تماس با ما</a>
-                            </li>
-                            <li>
-                                <a href="#">قوانین و مقررات</a>
-                            </li>
-                            <li>
-                                <a href="#">حریم خصوصی</a>
-                            </li>
-                            <li>
-                                <a href="#">سوالات متداول</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- Column -->
-                    <div class="space-y-4">
-                        <h3 class="text-xl font-bold">خدمات مشتریان</h3>
-                        <ul class="space-y-2 text-sm text-zinc-200">
-                            <li>
-                                <a href="#">پنل کاربری</a>
-                            </li>
-                            <li>
-                                <a href="#">ثبت سفارش</a>
-                            </li>
-                            <li>
-                                <a href="#">مشاهده وضعیت</a>
-                            </li>
-                            <li>
-                                <a href="#">تیکت پشتیبانی</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- Column -->
-                    <div class="space-y-4">
-                        <h3 class="text-xl font-bold">شبکه‌های اجتماعی</h3>
+                    <div class="space-y-3">
+                        <div class="flex gap-x-3">
+                            <div
+                                class="flex items-center  justify-center w-8 h-8 shadow-xl/50 border border-zinc-500 shadow-amber-200 bg-zinc-700 rounded-full ">
+                                <img src="./images/icons8-star-94.png" alt="ستارگان پیشرو" title="ستارگان پیشرو"
+                                    loading="lazy" class="w-5 h-5">
+                            </div>
 
-                        <div class="flex items-center gap-x-3 text-zinc-600">
-                            <a href="#">
-                                <svg class="w-6 h-6">
+                            <h3 class="text-base lg:text-xl font-bold text-zinc-200">ستارگان پیشرو</h3>
+                        </div>
+                        <p class="border-r-2 border-blue-500 pr-5 text-sm leading-6 tracking-tight text-zinc-400">
+                            ارائه بهترین خدمات بیمه و سرمایه‌گذاری با <span class="text-blue-600 font-bold">۶۸ نوع
+                                بیمه‌نامه تخصصی</span> و تیم مجرب. همراه شما در
+                            مسیر امنیت مالی.</p>
+                        <div class="space-x-2">
+                            <span
+                                class="py-1 px-3 bg-amber-50 text-xs rounded-full border border-amber-200 text-amber-700">رتبه
+                                برتر بیمه</span>
+                            <span
+                                class="py-1 px-3 bg-blue-50 text-xs rounded-full border border-blue-200 text-blue-700">۱۴۰۴</span>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <div class="space-y-3">
+                        <h3 class="text-base lg:text-xl font-bold text-zinc-200">خدمات مشتریان</h3>
+                        <ul class="space-y-2 text-sm text-zinc-400">
+                            <li>
+                                <a href="#"
+                                    class="inline-flex items-center gap-x-1 transition-all hover:text-blue-500 hover:-translate-x-1">
+                                    <svg class="w-3 h-3">
+                                        <use href="#minus"></use>
+                                    </svg>
+                                    <span>پنل کاربری</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="inline-flex items-center gap-x-1 transition-all hover:text-blue-500 hover:-translate-x-1">
+                                    <svg class="w-3 h-3">
+                                        <use href="#minus"></use>
+                                    </svg>
+                                    <span>ثبت سفارش</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="inline-flex items-center gap-x-1 transition-all hover:text-blue-500 hover:-translate-x-1">
+                                    <svg class="w-3 h-3">
+                                        <use href="#minus"></use>
+                                    </svg>
+                                    <span>مشاهده وضعیت</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="inline-flex items-center gap-x-1 transition-all hover:text-blue-500 hover:-translate-x-1">
+                                    <svg class="w-3 h-3">
+                                        <use href="#minus"></use>
+                                    </svg>
+                                    <span>تیکت پشتیبانی</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Column -->
+                    <div class="space-y-3">
+                        <h3 class="text-base lg:text-xl font-bold text-zinc-200">دسترسی سریع</h3>
+                        <ul class="space-y-2 text-sm  text-zinc-400">
+                            <li>
+                                <a href="#"
+                                    class="inline-flex items-center gap-x-1 transition-all hover:text-blue-500 hover:-translate-x-1">
+                                    <svg class="w-3 h-3">
+                                        <use href="#minus"></use>
+                                    </svg>
+                                    <span>درباره ما</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="inline-flex items-center gap-x-1 transition-all hover:text-blue-500 hover:-translate-x-1">
+                                    <svg class="w-3 h-3">
+                                        <use href="#minus"></use>
+                                    </svg>
+                                    <span>تماس با ما</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="inline-flex items-center gap-x-1 transition-all hover:text-blue-500 hover:-translate-x-1">
+                                    <svg class="w-3 h-3">
+                                        <use href="#minus"></use>
+                                    </svg>
+                                    <span>قوانین و مقررات</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="inline-flex items-center gap-x-1 transition-all hover:text-blue-500 hover:-translate-x-1">
+                                    <svg class="w-3 h-3">
+                                        <use href="#minus"></use>
+                                    </svg>
+                                    <span>حریم خصوصی</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="inline-flex items-center gap-x-1 transition-all hover:text-blue-500 hover:-translate-x-1">
+                                    <svg class="w-3 h-3">
+                                        <use href="#minus"></use>
+                                    </svg>
+                                    <span>سوالات متداول</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Column -->
+                    <div class="space-y-3">
+                        <h3 class="text-base lg:text-xl font-bold text-zinc-200">شبکه های اجتماعی</h3>
+                        <div class="flex items-center gap-x-4">
+                            <a href="#"
+                                class="p-2 rounded-full transition-all hover:-translate-y-1 hover:shadow-lg hover:bg-blue-500 hover:text-blue-400 hover:outline-1 hover:outline-blue-500 hover:outline-offset-2 text-blue-500">
+                                <svg class="w-5 h-5">
                                     <use href="#telegram"></use>
                                 </svg>
                             </a>
-                            <a href="#">
-                                <svg class="w-6 h-6">
+                            <a href="#"
+                                class="p-2 rounded-full transition-all hover:-translate-y-1 hover:shadow-lg hover:bg-purple-800 hover:text-purple-400 hover:outline-1 hover:outline-purple-800 hover:outline-offset-2 text-purple-800">
+                                <svg class="w-5 h-5">
                                     <use href="#instagram"></use>
                                 </svg>
                             </a>
-                            <a href="#">
-                                <svg class="w-6 h-6">
+                            <a href="#"
+                                class="p-2 rounded-full transition-all hover:-translate-y-1 hover:shadow-lg hover:bg-black hover:text-white hover:outline-1 hover:outline-black hover:outline-offset-2">
+                                <svg class="w-5 h-5">
                                     <use href="#twitter"></use>
                                 </svg>
                             </a>
                         </div>
+                        <div
+                            class="mt-5 p-3 rounded-2xl bg-linear-to-br from-white to-blue-50/30 border border-gray-300">
+                            <h5 class="text-sm font-medium">عضویت در خبرنامه</h5>
+                            <span class="text-xs text-zinc-500 font-light">از تخفیف‌های ویژه باخبر شوید</span>
+                            <form class="flex gap-x-2 mt-2">
+                                <input type="email"
+                                    class="w-full py-2 px-2 border border-gray-200 text-xs rounded-lg bg-white focus:outline-1 focus:outline-blue-500"
+                                    placeholder="ایمیل خود را وارد کنید..." required>
+                                <button
+                                    class="rounded-lg text-white bg-amber-500 px-3 py-0.5 text-sm shadow-lg shadow-amber-500/50">ثبت</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Enamad -->
+                <div
+                    class="flex flex-col-reverse md:flex-row gap-y-5 justify-between items-center mt-14 pt-10 border-t border-white/10">
+                    <div class="flex text-xs space-x-4">
+                        <span class="flex items-center gap-x-1 py-1 px-2 rounded-full text-emerald-500 bg-zinc-600">
+                            <svg class="w-3 h-3">
+                                <use href="#check-circle"></use>
+                            </svg>
+                            <span>نماد اعتماد</span>
+                        </span>
+                        <span class="flex items-center gap-x-1 py-1 px-2 rounded-full text-emerald-500 bg-zinc-600">
+                            <svg class="w-3 h-3">
+                                <use href="#check-circle"></use>
+                            </svg>
+                            <span>تظمین کیفیت</span>
+                        </span>
+                        <span class="flex items-center gap-x-1 py-1 px-2 rounded-full text-emerald-500 bg-zinc-600">
+                            <svg class="w-3 h-3">
+                                <use href="#check-circle"></use>
+                            </svg>
+                            <span>طراحی مدرن</span>
+                        </span>
+                    </div>
+                    <div class="shadow-sm p-2 rounded-2xl transition-all hover:shadow-xl bg-white">
+                        <a href="#">
+                            <img src="./images/enamad.png" alt="نماد الکترونیکی" title="نماد الکترونیکی"
+                                class="w-15 h-15" loading="lazy">
+                        </a>
                     </div>
                 </div>
                 <!-- Copyright -->
-                <div class="border-t border-gray-800 mt-10 pt-6">
-                    <p class="text-gray-500 text-sm text-center">© ۱۴۰۴ - تمامی حقوق برای ستارگان پیشرو پاسارگاد محفوظ
-                        است.</p>
+                <div class="mt-10 py-8 border-t border-white/10 text-center">
+                    <p class="text-sm  text-zinc-400">© تمامی حقوق برای ستارگان پیشرو پایدار محفوظ است.</p>
                 </div>
             </div>
         </footer>

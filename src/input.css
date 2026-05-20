@@ -124,7 +124,7 @@
 }
 
 @utility overlay {
-    @apply fixed invisible opacity-0 inset-0 z-10 w-full h-full bg-black/40 backdrop-blur-[6px] transition-all;
+    @apply fixed invisible opacity-0 z-10 inset-0 w-full h-full bg-black/40 backdrop-blur-[6px] transition-all;
 }
 
 @utility overlay--visible {
