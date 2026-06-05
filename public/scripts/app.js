@@ -32,4 +32,35 @@ document.addEventListener('alpine:init', () => {
             return this.activeItem === id
         }
     }))
+});
+
+// Swiper
+document.querySelectorAll('.js-swiper').forEach(element => {
+    const type = element.dataset.type
+    if (type === 'managers') {
+        new Swiper(element, {
+            slidesPerView: 1,
+            loop: true,
+            autoplay:true,
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 15
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+                1280: {
+                    slidesPerView: 4,
+                    spaceBetween: 20
+                }
+            }
+        })
+    }
 })

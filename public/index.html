@@ -12,6 +12,8 @@
         <script defer src="./scripts/collapse.min.js"></script>
         <!-- Alpine -->
         <script defer src="./scripts/alpine.min.js"></script>
+        <!-- Swiper -->
+        <link rel="stylesheet" href="./styles/swiper-bundle.min.css">
     </head>
 
     <body>
@@ -512,15 +514,6 @@
                         <span class="section-label">چرا ستارگان پیشرو</span>
                         <h1 class="section-title">بیمه‌ای متفاوت با تعهد
                             بیشتر</h1>
-                        <div
-                            class="flex items-center justify-center gap-1 w-full mt-5">
-                            <span
-                                class="h-0.5 w-20 bg-linear-to-r from-blue-400 to-white rounded-full"></span>
-                            <span
-                                class="bg-blue-400 h-1 w-1 rounded-full"></span>
-                            <span
-                                class="h-0.5 w-20 bg-linear-to-l from-blue-400 to-white rounded-full"></span>
-                        </div>
                     </div>
                     <!-- Grid -->
                     <div
@@ -703,15 +696,6 @@
                                 ایرانیان</span>
                             <h1 class="section-title">محبوب‌ترین
                                 بیمه‌نامه‌ها</h1>
-                            <div
-                                class="flex items-center justify-center gap-1 w-full mt-5">
-                                <span
-                                    class="h-0.5 w-20 bg-linear-to-r from-blue-400 to-white rounded-full"></span>
-                                <span
-                                    class="bg-blue-400 h-1 w-1 rounded-full"></span>
-                                <span
-                                    class="h-0.5 w-20 bg-linear-to-l from-blue-400 to-white rounded-full"></span>
-                            </div>
                         </div>
                         <!-- Grid -->
                         <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
@@ -787,7 +771,7 @@
                     </div>
                 </section>
 
-                <!-- Section -->
+                <!-- Managers Section -->
                 <section class="py-16 md:py-20">
                     <!-- Container -->
                     <div class="container mx-auto px-4 md:px-8 ">
@@ -796,93 +780,213 @@
                             <span class="section-label">سکانداران اعتماد</span>
                             <h1 class="section-title">مدیران ارشد و تیم
                                 حرفه‌ای</h1>
-                            <div
-                                class="flex items-center justify-center gap-1 w-full mt-5">
-                                <span
-                                    class="h-0.5 w-20 bg-linear-to-r from-blue-400 to-white rounded-full"></span>
-                                <span
-                                    class="bg-blue-400 h-1 w-1 rounded-full"></span>
-                                <span
-                                    class="h-0.5 w-20 bg-linear-to-l from-blue-400 to-white rounded-full"></span>
+                            <p
+                                class="mt-3 text-xs sm:text-sm text-gray-500 font-light">سکانداران
+                                اعتماد — متخصصان با سابقه و تعهد به رضایت
+                                شما</p>
+                        </div>
+                        <!-- Carts/Swiper -->
+                        <div class="swiper js-swiper" data-type="managers">
+                            <div class="swiper-wrapper">
+                                <!-- Cart -->
+                                <div class="swiper-slide">
+                                    <div
+                                        class="pb-4 bg-white border border-gray-200 rounded-2xl overflow-hidden">
+                                        <!-- Cart Header -->
+                                        <div
+                                            class="relative h-20 md:h-20 bg-linear-to-r from-gray-200 to-gray-100">
+                                            <div
+                                                class="absolute top-1/2 mx-auto left-0 right-0 w-fit bg-white p-1 rounded-2xl overflow-hidden">
+                                                <img
+                                                    src="./images/avatars/person-1.jpg"
+                                                    alt
+                                                    class="w-20 h-20 md:w-20 md:h-20 object-cover rounded-2xl">
+                                            </div>
+                                        </div>
+                                        <div class="h-10"></div>
+                                        <!-- Cart Content -->
+                                        <div class="mt-5 space-y-4 px-4">
+                                            <div class>
+                                                <h3
+                                                    class="font-bold text-lg md:text-xl text-center text-gray-800">دکتر
+                                                    احمد کریمی</h3>
+                                                <span
+                                                    class="w-fit block py-0.5 px-2 text-xs mx-auto mt-2 text-blue-600 rounded-full bg-blue-50 border border-blue-200">مدیر
+                                                    ارشد اجرایی</span>
+                                            </div>
+                                            <div class>
+                                                <p
+                                                    class="text-xs text-center text-gray-600">بیش
+                                                    از<span class="font-bold">
+                                                        ۲۰
+                                                        سال</span> تجربه
+                                                    در صنعت بیمه و سرمایه</p>
+                                            </div>
+                                            <div
+                                                class="flex items-center gap-x-4 mt-8">
+                                                <button
+                                                    class="w-full bg-blue-500 py-2 rounded-xl cursor-pointer text-white text-xs md:text-sm">مشاهده
+                                                    رزومه</button>
+                                                <button
+                                                    class="py-2 px-3 shrink-0 cursor-pointer text-gray-700 bg-gray-50 border border-gray-200 rounded-xl">
+                                                    <svg class="w-5 h-5">
+                                                        <use href="#mail"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <!-- Cart -->
+                                <div class="swiper-slide">
+                                    <div
+                                        class="pb-4 bg-white border border-gray-200 rounded-2xl overflow-hidden">
+                                        <!-- Cart Header -->
+                                        <div
+                                            class="relative h-20 md:h-20 bg-linear-to-r from-gray-200 to-gray-100">
+                                            <div
+                                                class="absolute top-1/2 mx-auto left-0 right-0 w-fit bg-white p-1 rounded-2xl overflow-hidden">
+                                                <img
+                                                    src="./images/avatars/person-2.jpg"
+                                                    alt
+                                                    class="w-20 h-20 md:w-20 md:h-20 object-cover rounded-2xl">
+                                            </div>
+                                        </div>
+                                        <div class="h-10"></div>
+                                        <!-- Cart Content -->
+                                        <div class="mt-5 space-y-4 px-4">
+                                            <div class>
+                                                <h3
+                                                    class="font-bold text-lg md:text-xl text-center text-gray-800">دکتر
+                                                    احمد کریمی</h3>
+                                                <span
+                                                    class="w-fit block py-0.5 px-2 text-xs mx-auto mt-2 text-blue-600 rounded-full bg-blue-50 border border-blue-200">مدیر
+                                                    ارشد اجرایی</span>
+                                            </div>
+                                            <div class>
+                                                <p
+                                                    class="text-xs text-center text-gray-600">بیش
+                                                    از<span class="font-bold">
+                                                        ۲۰
+                                                        سال</span> تجربه
+                                                    در صنعت بیمه و سرمایه</p>
+                                            </div>
+                                            <div
+                                                class="flex items-center gap-x-4 mt-8">
+                                                <button
+                                                    class="w-full bg-blue-500 py-2 rounded-xl cursor-pointer text-white text-xs md:text-sm">مشاهده
+                                                    رزومه</button>
+                                                <button
+                                                    class="py-2 px-3 shrink-0 cursor-pointer text-gray-700 bg-gray-50 border border-gray-200 rounded-xl">
+                                                    <svg class="w-5 h-5">
+                                                        <use href="#mail"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <!-- Cart -->
+                                <div class="swiper-slide">
+                                    <div
+                                        class="pb-4 bg-white border border-gray-200 rounded-2xl overflow-hidden">
+                                        <!-- Cart Header -->
+                                        <div
+                                            class="relative h-20 md:h-20 bg-linear-to-r from-gray-200 to-gray-100">
+                                            <div
+                                                class="absolute top-1/2 mx-auto left-0 right-0 w-fit bg-white p-1 rounded-2xl overflow-hidden">
+                                                <img
+                                                    src="./images/avatars/person-3.jpg"
+                                                    alt
+                                                    class="w-20 h-20 md:w-20 md:h-20 object-cover rounded-2xl">
+                                            </div>
+                                        </div>
+                                        <div class="h-10"></div>
+                                        <!-- Cart Content -->
+                                        <div class="mt-5 space-y-4 px-4">
+                                            <div class>
+                                                <h3
+                                                    class="font-bold text-lg md:text-xl text-center text-gray-800">دکتر
+                                                    احمد کریمی</h3>
+                                                <span
+                                                    class="w-fit block py-0.5 px-2 text-xs mx-auto mt-2 text-blue-600 rounded-full bg-blue-50 border border-blue-200">مدیر
+                                                    ارشد اجرایی</span>
+                                            </div>
+                                            <div class>
+                                                <p
+                                                    class="text-xs text-center text-gray-600">بیش
+                                                    از<span class="font-bold">
+                                                        ۲۰
+                                                        سال</span> تجربه
+                                                    در صنعت بیمه و سرمایه</p>
+                                            </div>
+                                            <div
+                                                class="flex items-center gap-x-4 mt-8">
+                                                <button
+                                                    class="w-full bg-blue-500 py-2 rounded-xl cursor-pointer text-white text-xs md:text-sm">مشاهده
+                                                    رزومه</button>
+                                                <button
+                                                    class="py-2 px-3 shrink-0 cursor-pointer text-gray-700 bg-gray-50 border border-gray-200 rounded-xl">
+                                                    <svg class="w-5 h-5">
+                                                        <use href="#mail"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <!-- Cart -->
+                                <div class="swiper-slide">
+                                    <div
+                                        class="pb-4 bg-white border border-gray-200 rounded-2xl overflow-hidden">
+                                        <!-- Cart Header -->
+                                        <div
+                                            class="relative h-20 md:h-20 bg-linear-to-r from-gray-200 to-gray-100">
+                                            <div
+                                                class="absolute top-1/2 mx-auto left-0 right-0 w-fit bg-white p-1 rounded-2xl overflow-hidden">
+                                                <img
+                                                    src="./images/avatars/person-4.jpg"
+                                                    alt
+                                                    class="w-20 h-20 md:w-20 md:h-20 object-cover rounded-2xl">
+                                            </div>
+                                        </div>
+                                        <div class="h-10"></div>
+                                        <!-- Cart Content -->
+                                        <div class="mt-5 space-y-4 px-4">
+                                            <div class>
+                                                <h3
+                                                    class="font-bold text-lg md:text-xl text-center text-gray-800">دکتر
+                                                    احمد کریمی</h3>
+                                                <span
+                                                    class="w-fit block py-0.5 px-2 text-xs mx-auto mt-2 text-blue-600 rounded-full bg-blue-50 border border-blue-200">مدیر
+                                                    ارشد اجرایی</span>
+                                            </div>
+                                            <div class>
+                                                <p
+                                                    class="text-xs text-center text-gray-600">بیش
+                                                    از<span class="font-bold">
+                                                        ۲۰
+                                                        سال</span> تجربه
+                                                    در صنعت بیمه و سرمایه</p>
+                                            </div>
+                                            <div
+                                                class="flex items-center gap-x-4 mt-8">
+                                                <button
+                                                    class="w-full bg-blue-500 py-2 rounded-xl cursor-pointer text-white text-xs md:text-sm">مشاهده
+                                                    رزومه</button>
+                                                <button
+                                                    class="py-2 px-3 shrink-0 cursor-pointer text-gray-700 bg-gray-50 border border-gray-200 rounded-xl">
+                                                    <svg class="w-5 h-5">
+                                                        <use href="#mail"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <!-- Grid -->
-                        <div
-                            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 rounded-2xl">
-                            <!-- Column -->
-                            <div
-                                class="p-5 space-y-4 rounded-2xl shadow-sm bg-linear-to-br from-gray-400 to-amber-50 border border-zinc-300 transition-transform hover:-translate-y-2 hover:shadow-2xl/10 bg-white">
-                                <!-- Header -->
-                                <div
-                                    class="w-max mx-auto rounded-2xl overflow-hidden bg-white/50 border border-zinc-100 shadow-2xl shadow-white/80">
-                                    <!-- Avatar -->
-                                    <img
-                                        src="./images/avatars/9375451_avatars_accounts_man_male_people_icon.png"
-                                        alt="کاربر"
-                                        title="دکتر احد کریمی"
-                                        class="w-20 h-20 lg:w-20 lg:h-20 object-cover"
-                                        loading="lazy">
-                                </div>
-                                <!-- Body -->
-                                <div class="text-center">
-                                    <h3
-                                        class=" text-lg md:text-xl mt-2 font-bold text-zinc-700">دکتر
-                                        احمد کریمی</h3>
-                                    <span class="text-xs text-blue-600">مدیر
-                                        ارشد اجرایی</span>
-                                    <p class="mt-3 text-zinc-500 text-sm">بیش از
-                                        ۲۰ سال تجربه در صنعت بیمه و سرمایه</p>
-                                </div>
-                            </div>
-                            <!-- Column -->
-                            <div
-                                class="p-5 space-y-4 rounded-2xl shadow-sm bg-linear-to-br from-gray-400 to-amber-50 border border-zinc-300 transition-transform hover:-translate-y-2 hover:shadow-2xl/10 bg-white">
-                                <!-- Header -->
-                                <div
-                                    class="w-max mx-auto rounded-2xl overflow-hidden bg-white/50 border border-zinc-100 shadow-2xl shadow-white/80">
-                                    <!-- Avatar -->
-                                    <img
-                                        src="./images/avatars/9375508_avatars_accounts_man_male_people_icon.png"
-                                        alt="مهندس سارا حسینی"
-                                        title="مهندس سارا حسینی"
-                                        class="w-20 h-20 lg:w-20 lg:h-20 object-cover"
-                                        loading="lazy">
-                                </div>
-                                <!-- Body -->
-                                <div class="text-center">
-                                    <h3
-                                        class=" text-lg md:text-xl mt-2 font-bold text-zinc-700">مهندس
-                                        سارا حسینی</h3>
-                                    <span class="text-xs text-blue-600">معاون
-                                        مدیر ارشد</span>
-                                    <p class="mt-3 text-zinc-500 text-sm">طراح
-                                        سیستم‌های نوین فروش بیمه</p>
-                                </div>
-                            </div> <!-- Column -->
-                            <div
-                                class="p-5 space-y-4 rounded-2xl shadow-sm bg-linear-to-br from-gray-400 to-amber-50 border border-zinc-300 transition-transform hover:-translate-y-2 hover:shadow-2xl/10 bg-white">
-                                <!-- Header -->
-                                <div
-                                    class="w-max mx-auto rounded-2xl overflow-hidden bg-white/50 border border-zinc-100 shadow-2xl shadow-white/80">
-                                    <!-- Avatar -->
-                                    <img
-                                        src="./images/avatars/9375573_avatars_accounts_man_male_people_icon.png"
-                                        alt="رضا محمدی" title="رضا محمدی"
-                                        class="w-20 h-20 lg:w-20 lg:h-20 object-cover"
-                                        loading="lazy">
-                                </div>
-                                <!-- Body -->
-                                <div class="text-center">
-                                    <h3
-                                        class=" text-lg md:text-xl mt-2 font-bold text-zinc-700">رضا
-                                        محمدی</h3>
-                                    <span class="text-xs text-blue-600">مدیر
-                                        توسعه فروش</span>
-                                    <p class="mt-3 text-zinc-500 text-sm">راهبری
-                                        تیم‌های فروش در استان‌ها</p>
-                                </div>
-                            </div>
-                        </div>
+
                         <a href="#"
                             class="group flex items-center gap-x-1 mt-10 w-max mx-auto py-2 px-4 text-sm font-medium rounded-full transition-all text-zinc-700 hover:text-blue-600">
 
@@ -900,15 +1004,6 @@
                         <div class="flex flex-col items-center mb-10 md:mb-14">
                             <span class="section-label">سوالات متداول</span>
                             <h1 class="section-title">پاسخ سوالات شما</h1>
-                            <div
-                                class="flex items-center justify-center gap-1 w-full mt-5">
-                                <span
-                                    class="h-0.5 w-20 bg-linear-to-r from-blue-400 to-white rounded-full"></span>
-                                <span
-                                    class="bg-blue-400 h-1 w-1 rounded-full"></span>
-                                <span
-                                    class="h-0.5 w-20 bg-linear-to-l from-blue-400 to-white rounded-full"></span>
-                            </div>
                         </div>
                         <!-- Section Content -->
                         <div x-data="accordianGroup"
@@ -918,7 +1013,7 @@
                                 class="bg-white border border-gray-200 rounded-xl overflow-hidden transition-all hover:shadow-lg/5">
                                 <button @click="toggle(1)"
                                     :class="isOpen(1) ? 'border-b border-gray-200' : ''"
-                                    class="flex items-center justify-between w-full cursor-pointer p-5 text-sm md:text-base font-bold text-zinc-700">
+                                    class="flex items-center justify-between w-full cursor-pointer p-5 text-xs sm:text-sm md:text-base font-bold text-zinc-700">
                                     <span>تفاوت بیمه عمر و بیمه درمان تکمیلی
                                         چیست؟</span>
                                     <div
@@ -934,7 +1029,7 @@
                                 <div x-show="isOpen(1)" x-cloak x-collapse>
                                     <div class="px-5 py-5">
                                         <p
-                                            class="leading-6 md:leading-7 text-sm text-zinc-600">بیمه
+                                            class="leading-6 md:leading-7 text-xs sm:text-sm text-zinc-600">بیمه
                                             عمر یک ابزار سرمایه‌گذاری بلندمدت
                                             است که علاوه بر پوشش فوت، بازده
                                             سرمایه‌گذاری هم دارد. اما بیمه درمان
@@ -950,7 +1045,7 @@
                                 class="bg-white border border-gray-200 rounded-xl overflow-hidden transition-all hover:shadow-lg/5">
                                 <button @click="toggle(2)"
                                     :class="isOpen(2) ? 'border-b border-gray-200' : ''"
-                                    class="flex items-center justify-between w-full cursor-pointer p-5 text-sm md:text-base font-bold text-zinc-700">
+                                    class="flex items-center justify-between w-full cursor-pointer p-5 text-xs sm:text-sm md:text-base font-bold text-zinc-700">
                                     <span>آیا می‌توانم بیمه‌نامه را به صورت
                                         آنلاین دریافت کنم؟</span>
                                     <div
@@ -966,7 +1061,7 @@
                                 <div x-show="isOpen(2)" x-cloak x-collapse>
                                     <div class="px-5 py-5">
                                         <p
-                                            class="leading-6 md:leading-7 text-sm text-zinc-600">
+                                            class="leading-6 md:leading-7 text-xs sm:text-sm text-zinc-600">
                                             بله! اکثر بیمه‌نامه‌های ما به صورت
                                             کاملاً آنلاین و بدون نیاز به مراجعه
                                             حضوری قابل صدور هستند. بیمه شخص
@@ -980,7 +1075,7 @@
                                 class="bg-white border border-gray-200 rounded-xl overflow-hidden transition-all hover:shadow-lg/5">
                                 <button @click="toggle(3)"
                                     :class="isOpen(3) ? 'border-b border-gray-200' : ''"
-                                    class="flex items-center justify-between w-full cursor-pointer p-5 text-sm md:text-base font-bold text-zinc-700">
+                                    class="flex items-center justify-between w-full cursor-pointer p-5 text-xs sm:text-sm md:text-base font-bold text-zinc-700">
                                     <span>فرآیند دریافت خسارت چقدر طول
                                         کشید؟</span>
                                     <div
@@ -996,7 +1091,7 @@
                                 <div x-show="isOpen(3)" x-cloak x-collapse>
                                     <div class="px-5 py-5">
                                         <p
-                                            class="leading-6 md:leading-7 text-sm text-zinc-600">
+                                            class="leading-6 md:leading-7 text-xs sm:text-sm text-zinc-600">
                                             بسته به نوع بیمه و پیچیدگی خسارت،
                                             معمولاً بین ۲۴ تا ۷۲ ساعت طول
                                             می‌کشد. برای خسارت‌های کوچک خودرو،
@@ -1011,7 +1106,7 @@
                                 class="bg-white border border-gray-200 rounded-xl overflow-hidden transition-all hover:shadow-lg/5">
                                 <button @click="toggle(4)"
                                     :class="isOpen(4) ? 'border-b border-gray-200' : ''"
-                                    class="flex items-center justify-between w-full cursor-pointer p-5 text-sm md:text-base font-bold text-zinc-700">
+                                    class="flex items-center justify-between w-full cursor-pointer p-5 text-xs sm:text-sm md:text-base font-bold text-zinc-700">
                                     <span>آیا امکان پرداخت اقساطی حق بیمه وجود
                                         دارد؟</span>
                                     <div
@@ -1027,7 +1122,7 @@
                                 <div x-show="isOpen(4)" x-cloak x-collapse>
                                     <div class="px-5 py-5">
                                         <p
-                                            class="leading-6 md:leading-7 text-sm text-zinc-600">
+                                            class="leading-6 md:leading-7 text-xs sm:text-sm text-zinc-600">
                                             بله. برای اکثر بیمه‌نامه‌ها امکان
                                             پرداخت ماهانه، فصلی یا سالانه فراهم
                                             است. بیمه عمر به صورت ماهانه، بیمه
@@ -1042,8 +1137,9 @@
                                 class="bg-white border border-gray-200 rounded-xl overflow-hidden transition-all hover:shadow-lg/5">
                                 <button @click="toggle(5)"
                                     :class="isOpen(5) ? 'border-b border-gray-200' : ''"
-                                    class="flex items-center justify-between w-full cursor-pointer p-5 text-sm md:text-base font-bold text-zinc-700">
-                                    <span>چگونه می‌توانم مشاور اختصاصی داشته باشم؟</span>
+                                    class="flex items-center justify-between w-full cursor-pointer p-5 text-xs sm:text-sm md:text-base font-bold text-zinc-700">
+                                    <span>چگونه می‌توانم مشاور اختصاصی داشته
+                                        باشم؟</span>
                                     <div
                                         :class="!isOpen(5)?'text-blue-600 bg-blue-50': 'text-red-600 bg-red-50'"
                                         class="flex items-center justify-center w-[22px] h-[22px] md:w-[28px] md:h-[28px] rounded-md">
@@ -1057,8 +1153,12 @@
                                 <div x-show="isOpen(5)" x-cloak x-collapse>
                                     <div class="px-5 py-5">
                                         <p
-                                            class="leading-6 md:leading-7 text-sm text-zinc-600">کافیست با شماره ۰۲۱-۸۸۴۴-۵۵۶۶ تماس بگیرید یا فرم درخواست مشاوره رایگان را پر کنید. یکی از کارشناسان ما در کمتر از یک ساعت با شما تماس می‌گیرد.
-                                           </p>
+                                            class="leading-6 md:leading-7 text-xs sm:text-sm text-zinc-600">کافیست
+                                            با شماره ۰۲۱-۸۸۴۴-۵۵۶۶ تماس بگیرید
+                                            یا فرم درخواست مشاوره رایگان را پر
+                                            کنید. یکی از کارشناسان ما در کمتر از
+                                            یک ساعت با شما تماس می‌گیرد.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -1072,15 +1172,6 @@
                         <div class="flex flex-col items-center mb-10 md:mb-14">
                             <span class="section-label">تماس با ما</span>
                             <h1 class="section-title">با ما در ارتباط باشید</h1>
-                            <div
-                                class="flex items-center justify-center gap-1 w-full mt-5">
-                                <span
-                                    class="h-0.5 w-20 bg-linear-to-r from-blue-400 to-white rounded-full"></span>
-                                <span
-                                    class="bg-blue-400 h-1 w-1 rounded-full"></span>
-                                <span
-                                    class="h-0.5 w-20 bg-linear-to-l from-blue-400 to-white rounded-full"></span>
-                            </div>
                         </div>
                         <!-- Section Content -->
                         <div
@@ -1421,8 +1512,11 @@
                 </div>
             </footer>
         </main>
-        <div class="overlay"></div>
 
+        <div class="overlay"></div>
+        <!-- Swiper -->
+        <script src="./scripts/swiper-bundle.min.js"></script>
+        <!-- My Script -->
         <script src="./scripts/app.js"></script>
     </body>
 
