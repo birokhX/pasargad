@@ -8,10 +8,26 @@
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <link rel="stylesheet" href="./styles/app.css">
+        <!-- Collapse -->
+        <script defer src="./scripts/collapse.min.js"></script>
+        <!-- Alpine -->
+        <script defer src="./scripts/alpine.min.js"></script>
     </head>
 
     <body>
         <svg class="hidden">
+            <!-- Plus -->
+            <symbol id="plus" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-plus-icon lucide-plus"><path
+                    d="M5 12h14" /><path d="M12 5v14" /></symbol>
+            <!-- Minus -->
+            <symbol id="minus" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-minus-icon lucide-minus"><path
+                    d="M5 12h14" /></symbol>
             <!-- Phone -->
             <symbol id="phone" xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -453,7 +469,6 @@
             </div>
         </div>
         <div class="h-20"></div>
-
         <!-- Main -->
         <main>
             <!-- Home Section -->
@@ -492,15 +507,20 @@
             <section class="py-16 md:py-20 shadow-lg-20 bg-white">
                 <!-- Container -->
                 <div class="container mx-auto px-6 lg:px-8">
-                    <!-- Title -->
-                    <div class="space-y-4 text-center mb-18">
-                        <span class="block text-blue-600 font-medium">چرا
-                            ستارگان پیشرو</span>
-                        <h2
-                            class="text-2xl md:text-4xl font-bold text-zinc-700">بیمه‌ای
-                            متفاوت با تعهد بیشتر</h2>
-                        <span
-                            class="block w-25 h-1 rounded-full mx-auto bg-blue-600"></span>
+                    <!-- Section Head -->
+                    <div class="flex flex-col items-center mb-10 md:mb-14">
+                        <span class="section-label">چرا ستارگان پیشرو</span>
+                        <h1 class="section-title">بیمه‌ای متفاوت با تعهد
+                            بیشتر</h1>
+                        <div
+                            class="flex items-center justify-center gap-1 w-full mt-5">
+                            <span
+                                class="h-0.5 w-20 bg-linear-to-r from-blue-400 to-white rounded-full"></span>
+                            <span
+                                class="bg-blue-400 h-1 w-1 rounded-full"></span>
+                            <span
+                                class="h-0.5 w-20 bg-linear-to-l from-blue-400 to-white rounded-full"></span>
+                        </div>
                     </div>
                     <!-- Grid -->
                     <div
@@ -569,6 +589,7 @@
                             </div>
                         </div>
                     </div>
+
                 </section>
 
                 <!-- Section -->
@@ -676,13 +697,21 @@
                 <section class="py-16 md:py-20">
                     <!-- Container -->
                     <div class="container mx-auto px-4 md:px-8">
-                        <!-- Title -->
-                        <div class="text-center mb-18">
-                            <h2
-                                class="text-2xl md:text-4xl font-bold text-zinc-700">محبوب‌ترین
-                                بیمه‌نامه‌ها</h2>
-                            <span class="text-sm text-zinc-500">انتخاب هوشمند
+                        <!-- Section Head -->
+                        <div class="flex flex-col items-center mb-10 md:mb-14">
+                            <span class="section-label">انتخاب هوشمند
                                 ایرانیان</span>
+                            <h1 class="section-title">محبوب‌ترین
+                                بیمه‌نامه‌ها</h1>
+                            <div
+                                class="flex items-center justify-center gap-1 w-full mt-5">
+                                <span
+                                    class="h-0.5 w-20 bg-linear-to-r from-blue-400 to-white rounded-full"></span>
+                                <span
+                                    class="bg-blue-400 h-1 w-1 rounded-full"></span>
+                                <span
+                                    class="h-0.5 w-20 bg-linear-to-l from-blue-400 to-white rounded-full"></span>
+                            </div>
                         </div>
                         <!-- Grid -->
                         <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
@@ -762,16 +791,20 @@
                 <section class="py-16 md:py-20">
                     <!-- Container -->
                     <div class="container mx-auto px-4 md:px-8 ">
-                        <!-- Title -->
-                        <div class="space-y-4 text-center mb-18">
-                            <span
-                                class="block font-medium text-blue-600">سکانداران
-                                اعتماد</span>
-                            <h2
-                                class="text-2xl md:text-4xl font-bold text-zinc-700">مدیران
-                                ارشد و تیم حرفه‌ای</h2>
-                            <span
-                                class="block w-25 h-1 mx-auto bg-blue-600 rounded-full"></span>
+                        <!-- Section Head -->
+                        <div class="flex flex-col items-center mb-10 md:mb-14">
+                            <span class="section-label">سکانداران اعتماد</span>
+                            <h1 class="section-title">مدیران ارشد و تیم
+                                حرفه‌ای</h1>
+                            <div
+                                class="flex items-center justify-center gap-1 w-full mt-5">
+                                <span
+                                    class="h-0.5 w-20 bg-linear-to-r from-blue-400 to-white rounded-full"></span>
+                                <span
+                                    class="bg-blue-400 h-1 w-1 rounded-full"></span>
+                                <span
+                                    class="h-0.5 w-20 bg-linear-to-l from-blue-400 to-white rounded-full"></span>
+                            </div>
                         </div>
                         <!-- Grid -->
                         <div
@@ -861,13 +894,193 @@
                         </a>
                     </div>
                 </section>
+                <section class="mb-20">
+                    <div class="container mx-auto px-4 md:px-8">
+                        <!-- Section Head -->
+                        <div class="flex flex-col items-center mb-10 md:mb-14">
+                            <span class="section-label">سوالات متداول</span>
+                            <h1 class="section-title">پاسخ سوالات شما</h1>
+                            <div
+                                class="flex items-center justify-center gap-1 w-full mt-5">
+                                <span
+                                    class="h-0.5 w-20 bg-linear-to-r from-blue-400 to-white rounded-full"></span>
+                                <span
+                                    class="bg-blue-400 h-1 w-1 rounded-full"></span>
+                                <span
+                                    class="h-0.5 w-20 bg-linear-to-l from-blue-400 to-white rounded-full"></span>
+                            </div>
+                        </div>
+                        <!-- Section Content -->
+                        <div x-data="accordianGroup"
+                            class="max-w-3xl mx-auto space-y-4">
+                            <!-- Item -->
+                            <div
+                                class="bg-white border border-gray-200 rounded-xl overflow-hidden transition-all hover:shadow-lg/5">
+                                <button @click="toggle(1)"
+                                    :class="isOpen(1) ? 'border-b border-gray-200' : ''"
+                                    class="flex items-center justify-between w-full cursor-pointer p-5 text-sm md:text-base font-bold text-zinc-700">
+                                    <span>تفاوت بیمه عمر و بیمه درمان تکمیلی
+                                        چیست؟</span>
+                                    <div
+                                        :class="!isOpen(1)?'text-blue-600 bg-blue-50': 'text-red-600 bg-red-50'"
+                                        class="flex items-center justify-center w-[22px] h-[22px] md:w-[28px] md:h-[28px] rounded-md">
+                                        <svg class="w-4 h-4 md:w-5 md:h-5">
+                                            <use
+                                                :href="!isOpen(1)?'#plus':'#minus'"></use>
+                                        </svg>
+                                    </div>
+                                </button>
+                                <!-- Body -->
+                                <div x-show="isOpen(1)" x-cloak x-collapse>
+                                    <div class="px-5 py-5">
+                                        <p
+                                            class="leading-6 md:leading-7 text-sm text-zinc-600">بیمه
+                                            عمر یک ابزار سرمایه‌گذاری بلندمدت
+                                            است که علاوه بر پوشش فوت، بازده
+                                            سرمایه‌گذاری هم دارد. اما بیمه درمان
+                                            تکمیلی هزینه‌های پزشکی شما را تکمیل
+                                            می‌کند و پوشش درمانی فراتر از بیمه
+                                            پایه
+                                            به شما می‌دهد.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item -->
+                            <div
+                                class="bg-white border border-gray-200 rounded-xl overflow-hidden transition-all hover:shadow-lg/5">
+                                <button @click="toggle(2)"
+                                    :class="isOpen(2) ? 'border-b border-gray-200' : ''"
+                                    class="flex items-center justify-between w-full cursor-pointer p-5 text-sm md:text-base font-bold text-zinc-700">
+                                    <span>آیا می‌توانم بیمه‌نامه را به صورت
+                                        آنلاین دریافت کنم؟</span>
+                                    <div
+                                        :class="!isOpen(2) ? 'text-blue-600 bg-blue-50' : 'text-red-600 bg-red-50'"
+                                        class="flex items-center justify-center w-[22px] h-[22px] md:w-[28px] md:h-[28px] rounded-md">
+                                        <svg class="w-4 h-4 md:w-5 md:h-5">
+                                            <use
+                                                :href="!isOpen(2) ? '#plus' : '#minus'"></use>
+                                        </svg>
+                                    </div>
+                                </button>
+                                <!-- Body -->
+                                <div x-show="isOpen(2)" x-cloak x-collapse>
+                                    <div class="px-5 py-5">
+                                        <p
+                                            class="leading-6 md:leading-7 text-sm text-zinc-600">
+                                            بله! اکثر بیمه‌نامه‌های ما به صورت
+                                            کاملاً آنلاین و بدون نیاز به مراجعه
+                                            حضوری قابل صدور هستند. بیمه شخص
+                                            ثالث، درمان تکمیلی و مسافرتی همه
+                                            آنلاین در دسترس هستند.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item -->
+                            <div
+                                class="bg-white border border-gray-200 rounded-xl overflow-hidden transition-all hover:shadow-lg/5">
+                                <button @click="toggle(3)"
+                                    :class="isOpen(3) ? 'border-b border-gray-200' : ''"
+                                    class="flex items-center justify-between w-full cursor-pointer p-5 text-sm md:text-base font-bold text-zinc-700">
+                                    <span>فرآیند دریافت خسارت چقدر طول
+                                        کشید؟</span>
+                                    <div
+                                        :class="!isOpen(3) ? 'text-blue-600 bg-blue-50' : 'text-red-600 bg-red-50'"
+                                        class="flex items-center justify-center w-[22px] h-[22px] md:w-[28px] md:h-[28px] rounded-md">
+                                        <svg class="w-4 h-4 md:w-5 md:h-5">
+                                            <use
+                                                :href="!isOpen(3) ? '#plus' : '#minus'"></use>
+                                        </svg>
+                                    </div>
+                                </button>
+                                <!-- Body -->
+                                <div x-show="isOpen(3)" x-cloak x-collapse>
+                                    <div class="px-5 py-5">
+                                        <p
+                                            class="leading-6 md:leading-7 text-sm text-zinc-600">
+                                            بسته به نوع بیمه و پیچیدگی خسارت،
+                                            معمولاً بین ۲۴ تا ۷۲ ساعت طول
+                                            می‌کشد. برای خسارت‌های کوچک خودرو،
+                                            اغلب در همان روز تسویه می‌شود. سیستم
+                                            پیگیری آنلاین ما به شما وضعیت را در
+                                            لحظه نشان می‌دهد.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item -->
+                            <div
+                                class="bg-white border border-gray-200 rounded-xl overflow-hidden transition-all hover:shadow-lg/5">
+                                <button @click="toggle(4)"
+                                    :class="isOpen(4) ? 'border-b border-gray-200' : ''"
+                                    class="flex items-center justify-between w-full cursor-pointer p-5 text-sm md:text-base font-bold text-zinc-700">
+                                    <span>آیا امکان پرداخت اقساطی حق بیمه وجود
+                                        دارد؟</span>
+                                    <div
+                                        :class="!isOpen(4) ? 'text-blue-600 bg-blue-50' : 'text-red-600 bg-red-50'"
+                                        class="flex items-center justify-center w-[22px] h-[22px] md:w-[28px] md:h-[28px] rounded-md">
+                                        <svg class="w-4 h-4 md:w-5 md:h-5">
+                                            <use
+                                                :href="!isOpen(4)?'#plus':'#minus'"></use>
+                                        </svg>
+                                    </div>
+                                </button>
+                                <!-- Body -->
+                                <div x-show="isOpen(4)" x-cloak x-collapse>
+                                    <div class="px-5 py-5">
+                                        <p
+                                            class="leading-6 md:leading-7 text-sm text-zinc-600">
+                                            بله. برای اکثر بیمه‌نامه‌ها امکان
+                                            پرداخت ماهانه، فصلی یا سالانه فراهم
+                                            است. بیمه عمر به صورت ماهانه، بیمه
+                                            شخص ثالث به صورت سالانه یا شش‌ماهه
+                                            قابل پرداخت است.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item -->
+                            <div
+                                class="bg-white border border-gray-200 rounded-xl overflow-hidden transition-all hover:shadow-lg/5">
+                                <button @click="toggle(5)"
+                                    :class="isOpen(5) ? 'border-b border-gray-200' : ''"
+                                    class="flex items-center justify-between w-full cursor-pointer p-5 text-sm md:text-base font-bold text-zinc-700">
+                                    <span>چگونه می‌توانم مشاور اختصاصی داشته باشم؟</span>
+                                    <div
+                                        :class="!isOpen(5)?'text-blue-600 bg-blue-50': 'text-red-600 bg-red-50'"
+                                        class="flex items-center justify-center w-[22px] h-[22px] md:w-[28px] md:h-[28px] rounded-md">
+                                        <svg class="w-4 h-4 md:w-5 md:h-5">
+                                            <use
+                                                :href="!isOpen(5)?'#plus':'#minus'"></use>
+                                        </svg>
+                                    </div>
+                                </button>
+                                <!-- Body -->
+                                <div x-show="isOpen(5)" x-cloak x-collapse>
+                                    <div class="px-5 py-5">
+                                        <p
+                                            class="leading-6 md:leading-7 text-sm text-zinc-600">کافیست با شماره ۰۲۱-۸۸۴۴-۵۵۶۶ تماس بگیرید یا فرم درخواست مشاوره رایگان را پر کنید. یکی از کارشناسان ما در کمتر از یک ساعت با شما تماس می‌گیرد.
+                                           </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <!-- Contact us -->
-                <section class="mb-10 md:mb-20">
+                <section class="mb-16 md:mb-20">
                     <div class="container mx-auto px-4 md:px-8">
                         <!-- Section Head -->
                         <div class="flex flex-col items-center mb-10 md:mb-14">
                             <span class="section-label">تماس با ما</span>
                             <h1 class="section-title">با ما در ارتباط باشید</h1>
+                            <div
+                                class="flex items-center justify-center gap-1 w-full mt-5">
+                                <span
+                                    class="h-0.5 w-20 bg-linear-to-r from-blue-400 to-white rounded-full"></span>
+                                <span
+                                    class="bg-blue-400 h-1 w-1 rounded-full"></span>
+                                <span
+                                    class="h-0.5 w-20 bg-linear-to-l from-blue-400 to-white rounded-full"></span>
+                            </div>
                         </div>
                         <!-- Section Content -->
                         <div
@@ -924,7 +1137,8 @@
                                 </div>
                             </div>
                             <!-- Column -->
-                            <div class="p-8 bg-white border border-gray-100 rounded-xl">
+                            <div
+                                class="p-8 bg-white border border-gray-100 rounded-xl">
                                 <!-- Title -->
                                 <h3
                                     class="text-lg text-gray-900 font-bold mb-5">درخواست
@@ -937,7 +1151,7 @@
                                                 class="block text-sm text-zinc-700">نام
                                                 و نام خانوادگی</label>
                                             <input type="text"
-                                                class="w-full py-3 px-4 outline-none border border-gray-200 rounded-xl text-sm text-zinc-500 "
+                                                class="w-full py-3 px-4 outline-none border border-gray-200 rounded-xl text-sm text-zinc-500  transition-all focus:border-blue-600"
                                                 placeholder="محمد محمدی">
                                         </div>
                                         <div class="space-y-1.5">
@@ -945,7 +1159,7 @@
                                                 class="block text-sm text-zinc-700">شماره
                                                 موبایل</label>
                                             <input type="text"
-                                                class="w-full py-3 px-4 outline-none border border-gray-200 rounded-xl text-sm text-zinc-500"
+                                                class="w-full py-3 px-4 outline-none border border-gray-200 rounded-xl text-sm text-zinc-500 transition-all focus:border-blue-600"
                                                 placeholder="۰۹۱۲..." dir="ltr">
                                         </div>
                                     </div>
@@ -966,11 +1180,20 @@
                                     </select>
                                 </div>
                                 <div class="block space-y-1.5">
-                                    <label for=""  class="block text-sm text-zinc-700">توضیحات (اختیاری)</label>
-                                    <textarea rows="3" name="" id="" class="w-full resize-none outline-none rounded-xl py-3 px-4 transition-all focus:border-blue-600 border border-gray-200 text-sm text-zinc-500" placeholder="سوال یا درخواست خود را بنویسید..."></textarea>
+                                    <label for
+                                        class="block text-sm text-zinc-700">توضیحات
+                                        (اختیاری)</label>
+                                    <textarea rows="3" name id
+                                        class="w-full resize-none outline-none rounded-xl py-3 px-4 transition-all focus:border-blue-600 border border-gray-200 text-sm text-zinc-500"
+                                        placeholder="سوال یا درخواست خود را بنویسید..."></textarea>
                                 </div>
-                                <button type="submit" class="w-full py-3 bg-amber-500 rounded-xl cursor-pointer font-medium transition-all transform hover:-translate-y-0.5 text-sm">ارسال و دریافت مشاوره رایگان</button>
-                                <p class="text-xs mt-1.5 text-center text-gray-500">اطلاعات شما محرمانه است و فقط برای ارتباط استفاده می‌شود</p>
+                                <button type="submit"
+                                    class="w-full py-3 bg-amber-500 rounded-xl cursor-pointer font-medium transition-all transform hover:-translate-y-0.5 text-sm">ارسال
+                                    و دریافت مشاوره رایگان</button>
+                                <p
+                                    class="text-xs mt-1.5 text-center text-gray-500">اطلاعات
+                                    شما محرمانه است و فقط برای ارتباط استفاده
+                                    می‌شود</p>
                             </form>
                         </div>
                     </div>

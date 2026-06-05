@@ -20,3 +20,16 @@ function openNav() {
     overlay.classList.add("overlay--visible");
 }
 overlay.addEventListener("click", closeNav);
+
+// Alpine
+document.addEventListener('alpine:init', () => {
+    Alpine.data('accordianGroup', () => ({
+        activeItem: null,
+        toggle(id) {
+            this.activeItem = this.activeItem === id ? null : id
+        },
+        isOpen(id) {
+            return this.activeItem === id
+        }
+    }))
+})
