@@ -38,6 +38,9 @@
     html {
         font-family: var(--font-vazir);
     }
+    body{
+        @apply bg-gray-50;
+    }
 
     /* Thin */
     @font-face {
@@ -135,7 +138,19 @@
     background-image: radial-gradient(circle at 10% 20%, rgba(255, 255, 240, 0.05) 1.5px, transparent 1.5px);
     background-size: 24px 24px;
 }
-
+@utility section-title{
+    @apply text-3xl md:text-4xl mt-4 font-bold text-zinc-800;
+}
+@utility section-label{
+    @apply flex items-center gap-x-2 w-fit px-3 py-2 mb-4 rounded-full text-sm font-medium text-blue-600 bg-blue-50 border border-blue-200;
+    &::before{
+        content:'';
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: var(--color-blue-600);
+    }
+}
 @custom-variant child (& > *);
 @custom-variant child-hover (& > *:hover);
 @custom-variant child-all (& *);

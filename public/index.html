@@ -1,857 +1,1206 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ستارگان پیشرو | بیمه پاسارگاد</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="./styles/app.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ستارگان پیشرو | بیمه پاسارگاد</title>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="./styles/app.css">
+    </head>
 
-<body>
-    <svg class="hidden">
-        <!-- Check Circle -->
-        <symbol id="check-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <circle cx="12" cy="12" r="8"></circle>
-            <path d="M9 12L11 14L15 10" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
-                fill="none"></path>
-        </symbol>
-        <!-- Minus -->
-        <symbol id="minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M19 13H5V11H19V13Z"></path>
-        </symbol>
-        <!-- Twitter -->
-        <symbol id="twitter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path
-                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231l5.45-6.231ZM17.083 19.77h1.833L7.084 4.126H5.117L17.083 19.77Z" />
-        </symbol>
-        <!-- Instagram -->
-        <symbol id="instagram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-            <circle cx="12" cy="12" r="4.5" fill="white" opacity="0.9" />
-            <circle cx="17.5" cy="6.5" r="1.5" fill="white" opacity="0.9" />
-        </symbol>
-        <!-- Telegram -->
-        <symbol id="telegram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <circle cx="12" cy="12" r="10" />
-            <path d="M16.5 8.5L7.5 11.5L10.5 12.5L12.5 16.5L14.5 12.5L17 10L16.5 8.5Z" fill="white" opacity="0.9" />
-            <path d="M10.5 12.5L8 15L8.5 12L10.5 12.5Z" fill="white" opacity="0.7" />
-        </symbol>
-        <!-- clipboard-document -->
-        <symbol id="clipboard-document" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01">
-            </path>
-        </symbol>
-        <!-- user-group -->
-        <symbol id="user-group" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
-            </path>
-        </symbol>
-        <!-- check-badge -->
-        <symbol id="check-badge" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
-            </path>
-        </symbol>
-        <!-- Notebook -->
-        <symbol id="notebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <rect x="4" y="2" width="16" height="20" rx="2" ry="2" />
-            <line x1="8" y1="6" x2="16" y2="6" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.7" />
-            <line x1="8" y1="10" x2="14" y2="10" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                opacity="0.7" />
-            <line x1="8" y1="14" x2="16" y2="14" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                opacity="0.7" />
-            <line x1="8" y1="18" x2="12" y2="18" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                opacity="0.7" />
-        </symbol>
-        <!-- Contact  -->
-        <symbol id="contact" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path
-                d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.68 14.91 16.08 14.82 16.43 14.94C17.55 15.31 18.76 15.51 20 15.51C20.55 15.51 21 15.96 21 16.51V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z" />
-        </symbol>
-        <!-- Information Circle -->
-        <symbol id="information-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <circle cx="12" cy="12" r="10" />
-            <path d="M12 16V12M12 8H12.01" stroke="white" stroke-width="1.5" stroke-linecap="round" />
-        </symbol>
-        <!-- Team -->
-        <symbol id="team" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path
-                d="M16 11C17.66 11 19 9.66 19 8C19 6.34 17.66 5 16 5C14.34 5 13 6.34 13 8C13 9.66 14.34 11 16 11ZM8 11C9.66 11 11 9.66 11 8C11 6.34 9.66 5 8 5C6.34 5 5 6.34 5 8C5 9.66 6.34 11 8 11ZM8 13C5.67 13 1 14.17 1 16.5V19H15V16.5C15 14.17 10.33 13 8 13ZM16 13C15.71 13 15.38 13.02 15 13.05C16.19 13.89 17 15.02 17 16.5V19H23V16.5C23 14.17 18.33 13 16 13Z" />
-        </symbol>
-        <!-- User Shield -->
-        <symbol id="user-shield" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z" />
-            <circle cx="12" cy="9" r="3" fill="white" opacity="0.8" />
-            <path d="M12 13C9.33 13 7 14.34 7 16V18H17V16C17 14.34 14.67 13 12 13Z" fill="white" opacity="0.6" />
-        </symbol>
-        <!-- Curve -->
-        <symbol id="curve" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 22">
-            <path d="M50 0C69 0 81 22 100 22L0 22C18.75 22 31 0 50 0Z" fill="currentColor"></path>
-        </symbol>
-        <!-- Bars 3 -->
-        <symbol id="bars-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-        </symbol>
-        <!-- Chevron Left -->
-        <symbol id="chevron-left" xmlns="http://www.w3.org/2000/symbol" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M15.41 16.59L10.83 12L15.41 7.41L14 6L8 12L14 18L15.41 16.59Z"></path>
-        </symbol>
-        <!-- Shopping Cart -->
-        <symbol id="shopping-cart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path
-                d="M6 19C6 20.1 6.9 21 8 21C9.1 21 10 20.1 10 19C10 17.9 9.1 17 8 17C6.9 17 6 17.9 6 19ZM16 17C14.9 17 14 17.9 14 19C14 20.1 14.9 21 16 21C17.1 21 18 20.1 18 19C18 17.9 17.1 17 16 17ZM5.5 4L6.2 6H19C19.4 6 19.7 6.2 19.9 6.5C20.1 6.8 20.1 7.2 19.9 7.5L17.3 12.6C17.1 13 16.7 13.3 16.2 13.3H8.1L7.5 14.7L7.6 14.8H18V17H7C6.2 17 5.6 16.3 5.7 15.5L6.5 13.3L3 4H1V2H4L5.5 4Z">
-            </path>
-        </symbol>
-        <!-- Login -->
-        <symbol id="login" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M15 3H19C20.1 3 21 3.9 21 5V19C21 20.1 20.1 21 19 21H15"></path>
-            <path d="M10 17L15 12L10 7"></path>
-            <path d="M15 12H3"></path>
-        </symbol>
-        <!-- Sun -->
-        <symbol id="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <circle cx="12" cy="12" r="5"></circle>
-            <path
-                d="M12 1V3M12 21V23M4.22 4.22L5.64 5.64M18.36 18.36L19.78 19.78M1 12H3M21 12H23M4.22 19.78L5.64 18.36M18.36 5.64L19.78 4.22"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-        </symbol>
-        <!-- Moon -->
-        <symbol id="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
-        </symbol>
-        <!-- X Mark -->
-        <symbol id="x-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path
-                d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z">
-            </path>
-        </symbol>
-        <!-- Home -->
-        <symbol id="home" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2L2 10L3 11.2L5 9.5V19H9V13H15V19H19V9.5L21 11.2L22 10L12 2Z"></path>
-        </symbol>
-        <!-- Chat -->
-        <symbol id="chat" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2Z"></path>
-            <circle cx="8" cy="10" r="1.5" fill="white" opacity="0.8"></circle>
-            <circle cx="12" cy="10" r="1.5" fill="white" opacity="0.8"></circle>
-            <circle cx="16" cy="10" r="1.5" fill="white" opacity="0.8"></circle>
-        </symbol>
-        <!-- Briefcase  -->
-        <symbol id="briefcase" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path
-                d="M20 6H16V4C16 2.9 15.1 2 14 2H10C8.9 2 8 2.9 8 4V6H4C2.9 6 2 6.9 2 8V19C2 20.1 2.9 21 4 21H20C21.1 21 22 20.1 22 19V8C22 6.9 21.1 6 20 6ZM10 4H14V6H10V4Z">
-            </path>
-            <rect x="2" y="11" width="20" height="3" fill="white" opacity="0.5"></rect>
-        </symbol>
-        <!-- Document Text -->
-        <symbol id="document-text" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2Z"></path>
-            <rect x="8" y="13" width="8" height="2" fill="white" opacity="0.8"></rect>
-            <rect x="8" y="9" width="6" height="2" fill="white" opacity="0.8"></rect>
-            <rect x="8" y="17" width="5" height="2" fill="white" opacity="0.8"></rect>
-        </symbol>
-        <!-- Phone Arrow Up Right" -->
-        <symbol id="phone-arrow-up-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path
-                d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.68 14.91 16.08 14.82 16.43 14.94C17.55 15.31 18.76 15.51 20 15.51C20.55 15.51 21 15.96 21 16.51V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z">
-            </path>
-            <path d="M17 7L21 3M21 3H16M21 3V8" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round"></path>
-        </symbol>
-        <!-- Chevron Down -->
-        <symbol id="chevron-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M16.59 8.59L12 13.17L7.41 8.59L6 10L12 16L18 10L16.59 8.59Z"></path>
-        </symbol>
-    </svg>
-    <!-- Header -->
-    <header class="fixed top-0 right-0 left-0 shadow-sm hidden lg:flex z-10 bg-white">
-        <!-- Container -->
-        <div class="container px-4 md:px-8 mx-auto h-20">
-            <div class="flex items-center justify-between h-full">
-                <!-- Nav -->
-                <nav class="flex items-center gap-x-10">
-                    <!-- Logo/title -->
-                    <div class="flex items-center gap-x-2">
-                        <!-- Bars 3 -->
-                        <div class="flex lg:hidden">
-                            <svg class="w-5 h-5">
-                                <use href="#bars-3"></use>
-                            </svg>
+    <body>
+        <svg class="hidden">
+            <!-- Phone -->
+            <symbol id="phone" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-phone-icon lucide-phone"><path
+                    d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" /></symbol>
+            <!-- map-pin -->
+            <symbol id="map-pin" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-map-pin-icon lucide-map-pin"><path
+                    d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle
+                    cx="12" cy="10" r="3" /></symbol>
+            <!-- Mail -->
+            <symbol id="mail" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-mail-icon lucide-mail"><path
+                    d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" /><rect x="2"
+                    y="4" width="20" height="16" rx="2" /></symbol>
+            <!-- Check Circle -->
+            <symbol id="check-circle" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="currentColor">
+                <circle cx="12" cy="12" r="8"></circle>
+                <path d="M9 12L11 14L15 10" stroke="white" stroke-width="1.8"
+                    stroke-linecap="round" stroke-linejoin="round"
+                    fill="none"></path>
+            </symbol>
+            <!-- Minus -->
+            <symbol id="minus" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 13H5V11H19V13Z"></path>
+            </symbol>
+            <!-- Twitter -->
+            <symbol id="twitter" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231l5.45-6.231ZM17.083 19.77h1.833L7.084 4.126H5.117L17.083 19.77Z" />
+            </symbol>
+            <!-- Instagram -->
+            <symbol id="instagram" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="currentColor">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <circle cx="12" cy="12" r="4.5" fill="white" opacity="0.9" />
+                <circle cx="17.5" cy="6.5" r="1.5" fill="white" opacity="0.9" />
+            </symbol>
+            <!-- Telegram -->
+            <symbol id="telegram" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="currentColor">
+                <circle cx="12" cy="12" r="10" />
+                <path
+                    d="M16.5 8.5L7.5 11.5L10.5 12.5L12.5 16.5L14.5 12.5L17 10L16.5 8.5Z"
+                    fill="white" opacity="0.9" />
+                <path d="M10.5 12.5L8 15L8.5 12L10.5 12.5Z" fill="white"
+                    opacity="0.7" />
+            </symbol>
+            <!-- clipboard-document -->
+            <symbol id="clipboard-document" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="1.8"
+                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01">
+                </path>
+            </symbol>
+            <!-- user-group -->
+            <symbol id="user-group" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="1.8"
+                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                </path>
+            </symbol>
+            <!-- check-badge -->
+            <symbol id="check-badge" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="1.8"
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                </path>
+            </symbol>
+            <!-- Notebook -->
+            <symbol id="notebook" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="currentColor">
+                <rect x="4" y="2" width="16" height="20" rx="2" ry="2" />
+                <line x1="8" y1="6" x2="16" y2="6" stroke="white"
+                    stroke-width="1.5" stroke-linecap="round" opacity="0.7" />
+                <line x1="8" y1="10" x2="14" y2="10" stroke="white"
+                    stroke-width="1.5" stroke-linecap="round"
+                    opacity="0.7" />
+                <line x1="8" y1="14" x2="16" y2="14" stroke="white"
+                    stroke-width="1.5" stroke-linecap="round"
+                    opacity="0.7" />
+                <line x1="8" y1="18" x2="12" y2="18" stroke="white"
+                    stroke-width="1.5" stroke-linecap="round"
+                    opacity="0.7" />
+            </symbol>
+            <!-- Contact  -->
+            <symbol id="contact" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.68 14.91 16.08 14.82 16.43 14.94C17.55 15.31 18.76 15.51 20 15.51C20.55 15.51 21 15.96 21 16.51V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z" />
+            </symbol>
+            <!-- Information Circle -->
+            <symbol id="information-circle" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="currentColor">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 16V12M12 8H12.01" stroke="white" stroke-width="1.5"
+                    stroke-linecap="round" />
+            </symbol>
+            <!-- Team -->
+            <symbol id="team" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M16 11C17.66 11 19 9.66 19 8C19 6.34 17.66 5 16 5C14.34 5 13 6.34 13 8C13 9.66 14.34 11 16 11ZM8 11C9.66 11 11 9.66 11 8C11 6.34 9.66 5 8 5C6.34 5 5 6.34 5 8C5 9.66 6.34 11 8 11ZM8 13C5.67 13 1 14.17 1 16.5V19H15V16.5C15 14.17 10.33 13 8 13ZM16 13C15.71 13 15.38 13.02 15 13.05C16.19 13.89 17 15.02 17 16.5V19H23V16.5C23 14.17 18.33 13 16 13Z" />
+            </symbol>
+            <!-- User Shield -->
+            <symbol id="user-shield" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z" />
+                <circle cx="12" cy="9" r="3" fill="white" opacity="0.8" />
+                <path
+                    d="M12 13C9.33 13 7 14.34 7 16V18H17V16C17 14.34 14.67 13 12 13Z"
+                    fill="white" opacity="0.6" />
+            </symbol>
+            <!-- Bars 3 -->
+            <symbol id="bars-3" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </symbol>
+            <!-- Chevron Left -->
+            <symbol id="chevron-left" xmlns="http://www.w3.org/2000/symbol"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M15.41 16.59L10.83 12L15.41 7.41L14 6L8 12L14 18L15.41 16.59Z"></path>
+            </symbol>
+            <!-- Shopping Cart -->
+            <symbol id="shopping-cart" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M6 19C6 20.1 6.9 21 8 21C9.1 21 10 20.1 10 19C10 17.9 9.1 17 8 17C6.9 17 6 17.9 6 19ZM16 17C14.9 17 14 17.9 14 19C14 20.1 14.9 21 16 21C17.1 21 18 20.1 18 19C18 17.9 17.1 17 16 17ZM5.5 4L6.2 6H19C19.4 6 19.7 6.2 19.9 6.5C20.1 6.8 20.1 7.2 19.9 7.5L17.3 12.6C17.1 13 16.7 13.3 16.2 13.3H8.1L7.5 14.7L7.6 14.8H18V17H7C6.2 17 5.6 16.3 5.7 15.5L6.5 13.3L3 4H1V2H4L5.5 4Z">
+                </path>
+            </symbol>
+            <!-- Login -->
+            <symbol id="login" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                    d="M15 3H19C20.1 3 21 3.9 21 5V19C21 20.1 20.1 21 19 21H15"></path>
+                <path d="M10 17L15 12L10 7"></path>
+                <path d="M15 12H3"></path>
+            </symbol>
+            <!-- Sun -->
+            <symbol id="sun" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="currentColor">
+                <circle cx="12" cy="12" r="5"></circle>
+                <path
+                    d="M12 1V3M12 21V23M4.22 4.22L5.64 5.64M18.36 18.36L19.78 19.78M1 12H3M21 12H23M4.22 19.78L5.64 18.36M18.36 5.64L19.78 4.22"
+                    stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round"></path>
+            </symbol>
+            <!-- Moon -->
+            <symbol id="moon" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+            </symbol>
+            <!-- X Mark -->
+            <symbol id="x-mark" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z">
+                </path>
+            </symbol>
+            <!-- Home -->
+            <symbol id="home" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M12 2L2 10L3 11.2L5 9.5V19H9V13H15V19H19V9.5L21 11.2L22 10L12 2Z"></path>
+            </symbol>
+            <!-- Chat -->
+            <symbol id="chat" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2Z"></path>
+                <circle cx="8" cy="10" r="1.5" fill="white"
+                    opacity="0.8"></circle>
+                <circle cx="12" cy="10" r="1.5" fill="white"
+                    opacity="0.8"></circle>
+                <circle cx="16" cy="10" r="1.5" fill="white"
+                    opacity="0.8"></circle>
+            </symbol>
+            <!-- Briefcase  -->
+            <symbol id="briefcase" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M20 6H16V4C16 2.9 15.1 2 14 2H10C8.9 2 8 2.9 8 4V6H4C2.9 6 2 6.9 2 8V19C2 20.1 2.9 21 4 21H20C21.1 21 22 20.1 22 19V8C22 6.9 21.1 6 20 6ZM10 4H14V6H10V4Z">
+                </path>
+                <rect x="2" y="11" width="20" height="3" fill="white"
+                    opacity="0.5"></rect>
+            </symbol>
+            <!-- Document Text -->
+            <symbol id="document-text" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2Z"></path>
+                <rect x="8" y="13" width="8" height="2" fill="white"
+                    opacity="0.8"></rect>
+                <rect x="8" y="9" width="6" height="2" fill="white"
+                    opacity="0.8"></rect>
+                <rect x="8" y="17" width="5" height="2" fill="white"
+                    opacity="0.8"></rect>
+            </symbol>
+            <!-- Phone Arrow Up Right" -->
+            <symbol id="phone-arrow-up-right" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.68 14.91 16.08 14.82 16.43 14.94C17.55 15.31 18.76 15.51 20 15.51C20.55 15.51 21 15.96 21 16.51V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z">
+                </path>
+                <path d="M17 7L21 3M21 3H16M21 3V8" stroke="white"
+                    stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+            </symbol>
+            <!-- Chevron Down -->
+            <symbol id="chevron-down" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M16.59 8.59L12 13.17L7.41 8.59L6 10L12 16L18 10L16.59 8.59Z"></path>
+            </symbol>
+        </svg>
+        <!-- Header -->
+        <header
+            class="fixed top-0 right-0 left-0 shadow-sm hidden lg:flex z-10 bg-white">
+            <!-- Container -->
+            <div class="container px-4 md:px-8 mx-auto h-20">
+                <div class="flex items-center justify-between h-full">
+                    <!-- Nav -->
+                    <nav class="flex items-center gap-x-10">
+                        <!-- Logo/title -->
+                        <div class="flex items-center gap-x-2">
+                            <!-- Bars 3 -->
+                            <div class="flex lg:hidden">
+                                <svg class="w-5 h-5">
+                                    <use href="#bars-3"></use>
+                                </svg>
+                            </div>
+                            <!-- Logo -->
+                            <img
+                                src="./images/pasargad/Logo-removebg-preview.png"
+                                alt="لوگو" title="بیمه پاسارگاد"
+                                loading="lazy"
+                                class="w-15 h-15 hidden lg:block">
+                            <!-- Title -->
+                            <div class="flex flex-col">
+                                <span
+                                    class="text-xl font-bold text-zinc-800">ستارگان
+                                    پیشرو</span>
+                                <span
+                                    class="text-xs text-blue-700 leading-3">بیمه
+                                    پاسارگاد</span>
+                            </div>
                         </div>
-                        <!-- Logo -->
-                        <img src="./images/pasargad/Logo-removebg-preview.png" alt="لوگو" title="بیمه پاسارگاد"
-                            loading="lazy" class="w-15 h-15 hidden lg:block">
-                        <!-- Title -->
+                    </nav>
+                    <!-- Menu -->
+                    <ul
+                        class="hidden lg:flex items-center gap-x-7 lg:gap-x-10 child:transition-colors font-medium text-zinc-700 child:hover:text-blue-700">
+                        <li>
+                            <a href="#">خانه</a>
+                        </li>
+                        <li>
+                            <a href="#">مدیران کل</a>
+                        </li>
+                        <li>
+                            <a href="#">انواع بیمه</a>
+                        </li>
+                        <li>
+                            <a href="#">درباره ما</a>
+                        </li>
+                        <li>
+                            <a href="#">تماس</a>
+                        </li>
+                    </ul>
+                    <div class="text-sm">
+                        <a href="#"
+                            class="flex items-center gap-x-1 text-white py-3 px-3 shadow-md rounded-full bg-blue-700 transition-all hover:-translate-y-1 hover:shadow-blue-500/50">
+                            <svg class="w-5 h-5">
+                                <use href="#login"></use>
+                            </svg>
+                            <span class="hidden lg:flex">ورود</span>
+                            <span class="text-white/50 hidden lg:flex">|</span>
+                            <span>ثبت نام</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Mobile Navbar -->
+        <div class="shadow fixed top-0 left-0 right-0 bg-white z-10 lg:hidden">
+            <div class="container px-4 lg:px-8 mx-auto h-20 ">
+                <div class="flex justify-between items-center h-full">
+                    <!-- Bars 3 -->
+                    <div class="cursor-pointer open-nav-mobile-btn">
+                        <svg class="w-5 h-5">
+                            <use href="#bars-3"></use>
+                        </svg>
+                    </div>
+                    <!-- Logo/Title -->
+                    <div class="flex items-center gap-x-1">
+                        <img src="./images/pasargad/Logo-removebg-preview.png"
+                            alt="لوگو" class="w-15 h-15">
                         <div class="flex flex-col">
-                            <span class="text-xl font-bold text-zinc-800">ستارگان پیشرو</span>
-                            <span class="text-xs text-blue-700 leading-3">بیمه پاسارگاد</span>
+                            <span
+                                class="text-base font-bold text-zinc-800">ستارگان
+                                پیشرو</span>
+                            <span
+                                class="text-[0.6rem] text-blue-700 leading-3">بیمه
+                                پاسارگاد</span>
                         </div>
                     </div>
-                </nav>
-                <!-- Menu -->
-                <ul
-                    class="hidden lg:flex items-center gap-x-7 lg:gap-x-10 child:transition-colors font-medium text-zinc-700 child:hover:text-blue-700">
-                    <li>
-                        <a href="#">خانه</a>
-                    </li>
-                    <li>
-                        <a href="#">مدیران کل</a>
-                    </li>
-                    <li>
-                        <a href="#">انواع بیمه</a>
-                    </li>
-                    <li>
-                        <a href="#">درباره ما</a>
-                    </li>
-                    <li>
-                        <a href="#">تماس</a>
-                    </li>
-                </ul>
-                <div class="text-sm">
+                    <!-- Register Button -->
                     <a href="#"
-                        class="flex items-center gap-x-1 text-white py-3 px-3 shadow-md rounded-full bg-blue-700 transition-all hover:-translate-y-1 hover:shadow-blue-500/50">
-                        <svg class="w-5 h-5">
+                        class="flex items-center gap-x-1 cursor-pointer text-sm text-white py-2 px-3 shadow-lg rounded-full bg-blue-700 transition-all hover:-translate-y-1 hover:shadow-blue-500/50">
+                        <svg class="w-4 h-4">
                             <use href="#login"></use>
                         </svg>
-                        <span class="hidden lg:flex">ورود</span>
-                        <span class="text-white/50 hidden lg:flex">|</span>
-                        <span>ثبت نام</span>
+                        <span class="text-xs">ورود</span>
                     </a>
                 </div>
             </div>
         </div>
-    </header>
-    <!-- Mobile Navbar -->
-    <div class="shadow fixed top-0 left-0 right-0 bg-white z-10 lg:hidden">
-        <div class="container px-4 lg:px-8 mx-auto h-20 ">
-            <div class="flex justify-between items-center h-full">
-                <!-- Bars 3 -->
-                <div class="cursor-pointer open-nav-mobile-btn">
-                    <svg class="w-5 h-5">
-                        <use href="#bars-3"></use>
-                    </svg>
-                </div>
-                <!-- Logo/Title -->
-                <div class="flex items-center gap-x-1">
-                    <img src="./images/pasargad/Logo-removebg-preview.png" alt="لوگو" class="w-15 h-15">
+        <!-- Mobile Nav Menu -->
+        <div
+            class="nav-mobile fixed top-0 bottom-0 -right-64 z-50 my-2 w-64 bg-white py-4 p-3 rounded-2xl shadow-lg transition-all duration-500">
+            <!-- Nav Header -->
+            <div
+                class="flex justify-between items-center pb-5 mb-5 border-b border-gray-100">
+                <div class="flex items-center gap-x-2">
+                    <img src="./images/pasargad/Logo-removebg-preview.png"
+                        alt="لوگو" title="بیمه پاسارگاد" class="w-8 h-8"
+                        loading="lazy">
                     <div class="flex flex-col">
-                        <span class="text-base font-bold text-zinc-800">ستارگان پیشرو</span>
-                        <span class="text-[0.6rem] text-blue-700 leading-3">بیمه پاسارگاد</span>
+                        <span class="text-sm font-bold text-zinc-800">ستارگان
+                            پیشرو</span>
+                        <span class="text-xs text-blue-700 leading-3">بیمه
+                            پاسارگاد</span>
                     </div>
                 </div>
-                <!-- Register Button -->
-                <a href="#"
-                    class="flex items-center gap-x-1 cursor-pointer text-sm text-white py-2 px-3 shadow-lg rounded-full bg-blue-700 transition-all hover:-translate-y-1 hover:shadow-blue-500/50">
-                    <svg class="w-4 h-4">
-                        <use href="#login"></use>
+                <div
+                    class="close-nav-mobile-btn bg-red-50 text-red-400 rounded-md">
+                    <svg class="w-5 h-5">
+                        <use href="#x-mark"></use>
                     </svg>
-                    <span class="text-xs">ورود</span>
-                </a>
-            </div>
-        </div>
-    </div>
-    <!-- Mobile Nav Menu -->
-    <div
-        class="nav-mobile fixed top-0 bottom-0 -right-64 z-50 my-2 w-64 bg-white py-4 p-3 rounded-2xl shadow-lg transition-all duration-500">
-        <!-- Nav Header -->
-        <div class="flex justify-between items-center pb-5 mb-5 border-b border-gray-100">
-            <div class="flex items-center gap-x-2">
-                <img src="./images/pasargad/Logo-removebg-preview.png" alt="لوگو" title="بیمه پاسارگاد" class="w-8 h-8"
-                    loading="lazy">
-                <div class="flex flex-col">
-                    <span class="text-sm font-bold text-zinc-800">ستارگان پیشرو</span>
-                    <span class="text-xs text-blue-700 leading-3">بیمه پاسارگاد</span>
                 </div>
             </div>
-            <div class="close-nav-mobile-btn bg-red-50 text-red-400 rounded-md">
-                <svg class="w-5 h-5">
-                    <use href="#x-mark"></use>
-                </svg>
+            <!-- Nav Body -->
+            <div class>
+                <!-- Menu -->
+                <div
+                    class="flex flex-col space-y-2 text-sm bg-gray-50 p-2 rounded-2xl text-zinc-700 child:py-2 child:px-2">
+                    <a href="#"
+                        class="flex items-center justify-between gap-x-1">
+                        <span class="flex items-center gap-x-2">
+                            <svg class="w-4 h-4">
+                                <use href="#home"></use>
+                            </svg>
+                            <span>خانه</span>
+                        </span>
+                        <svg class="w-4 h-4">
+                            <use href="#chevron-left"></use>
+                        </svg>
+                    </a>
+                    <a href="#"
+                        class="flex items-center justify-between gap-x-1 ">
+                        <span class="flex items-center gap-x-2">
+                            <svg class="w-4 h-4">
+                                <use href="#user-shield"></use>
+                            </svg>
+                            <span>مدیران</span>
+                        </span>
+                        <svg class="w-4 h-4">
+                            <use href="#chevron-left"></use>
+                        </svg>
+                    </a>
+                    <a href="#"
+                        class="flex items-center justify-between gap-x-1 ">
+                        <span class="flex items-center gap-x-2">
+                            <svg class="w-4 h-4">
+                                <use href="#notebook"></use>
+                            </svg>
+                            <span>انواع بیمه</span>
+                        </span>
+                        <svg class="w-4 h-4">
+                            <use href="#chevron-left"></use>
+                        </svg>
+                    </a>
+                    <a href="#"
+                        class="flex items-center justify-between gap-x-1 ">
+                        <span class="flex items-center gap-x-2">
+                            <svg class="w-4 h-4">
+                                <use href="#team"></use>
+                            </svg>
+                            <span>نمایندگان</span>
+                        </span>
+                        <svg class="w-4 h-4">
+                            <use href="#chevron-left"></use>
+                        </svg>
+                    </a>
+                    <a href="#"
+                        class="flex items-center justify-between gap-x-1 ">
+                        <span class="flex items-center gap-x-2">
+                            <svg class="w-4 h-4">
+                                <use href="#information-circle"></use>
+                            </svg>
+                            <span>درباره ما</span>
+                        </span>
+                        <svg class="w-4 h-4">
+                            <use href="#chevron-left"></use>
+                        </svg>
+                    </a>
+                    <a href="#"
+                        class="flex items-center justify-between gap-x-1 ">
+                        <span class="flex items-center gap-x-2">
+                            <svg class="w-4 h-4">
+                                <use href="#contact "></use>
+                            </svg>
+                            <span>تماس</span>
+                        </span>
+                        <svg class="w-4 h-4">
+                            <use href="#chevron-left"></use>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
-        <!-- Nav Body -->
-        <div class="">
-            <!-- Menu -->
-            <div class="flex flex-col space-y-2 text-sm bg-gray-50 p-2 rounded-2xl text-zinc-700 child:py-2 child:px-2">
-                <a href="#" class="flex items-center justify-between gap-x-1">
-                    <span class="flex items-center gap-x-2">
-                        <svg class="w-4 h-4">
-                            <use href="#home"></use>
-                        </svg>
-                        <span>خانه</span>
-                    </span>
-                    <svg class="w-4 h-4">
-                        <use href="#chevron-left"></use>
-                    </svg>
-                </a>
-                <a href="#" class="flex items-center justify-between gap-x-1 ">
-                    <span class="flex items-center gap-x-2">
-                        <svg class="w-4 h-4">
-                            <use href="#user-shield"></use>
-                        </svg>
-                        <span>مدیران</span>
-                    </span>
-                    <svg class="w-4 h-4">
-                        <use href="#chevron-left"></use>
-                    </svg>
-                </a>
-                <a href="#" class="flex items-center justify-between gap-x-1 ">
-                    <span class="flex items-center gap-x-2">
-                        <svg class="w-4 h-4">
-                            <use href="#notebook"></use>
-                        </svg>
-                        <span>انواع بیمه</span>
-                    </span>
-                    <svg class="w-4 h-4">
-                        <use href="#chevron-left"></use>
-                    </svg>
-                </a>
-                <a href="#" class="flex items-center justify-between gap-x-1 ">
-                    <span class="flex items-center gap-x-2">
-                        <svg class="w-4 h-4">
-                            <use href="#team"></use>
-                        </svg>
-                        <span>نمایندگان</span>
-                    </span>
-                    <svg class="w-4 h-4">
-                        <use href="#chevron-left"></use>
-                    </svg>
-                </a>
-                <a href="#" class="flex items-center justify-between gap-x-1 ">
-                    <span class="flex items-center gap-x-2">
-                        <svg class="w-4 h-4">
-                            <use href="#information-circle"></use>
-                        </svg>
-                        <span>درباره ما</span>
-                    </span>
-                    <svg class="w-4 h-4">
-                        <use href="#chevron-left"></use>
-                    </svg>
-                </a>
-                <a href="#" class="flex items-center justify-between gap-x-1 ">
-                    <span class="flex items-center gap-x-2">
-                        <svg class="w-4 h-4">
-                            <use href="#contact "></use>
-                        </svg>
-                        <span>تماس</span>
-                    </span>
-                    <svg class="w-4 h-4">
-                        <use href="#chevron-left"></use>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="h-20"></div>
+        <div class="h-20"></div>
 
-    <!-- Main -->
-    <main>
-        <!-- Home Section -->
-        <section class="home hero-pattern bg-zinc-700 text-white max-w-8xl mx-auto">
-            <div class="container mx-auto px-6 lg:px-8 py-12 md:py-24">
-                <div class="max-w-3xl space-y-6">
-                    <span
-                        class="inline-block backdrop-blur-sm bg-white/20 py-1 px-4 rounded-full font-medium text-sm text-white">بیمه
-                        زندگی و سرمایه گذاری</span>
-                    <h2 class="text-4xl md:text-5xl lg:text-6xl md:leading-17 lg:leading-20 font-bold">
-                        <span>همراه مطمئن شما در مسیر </span>
-                        <span class="text-amber-300">آرامش فردا</span>
-                    </h2>
-                    <p class="text-md md:text-xl max-w-2xl mb-8 leading-8 md:leading-10 font-medium text-blue-50">بیش از
-                        ۶۸ نوع بیمه‌نامه تخصصی با پشتیبانی حرفه‌ای و بهترین مشاوران. آینده خود را با اعتماد
-                        بسازید.</p>
-                    <div class="flex gap-x-2 child:py-3 child:px-7 child:rounded-xl ">
-                        <a href="#" class="bg-white text-blue-900 font-bold shadow-lg text-sm md:text-base">دریافت
-                            مشاوره رایگان</a>
+        <!-- Main -->
+        <main>
+            <!-- Home Section -->
+            <section
+                class="home hero-pattern bg-zinc-700 text-white max-w-8xl mx-auto">
+                <div class="container mx-auto px-6 lg:px-8 py-12 md:py-24">
+                    <div class="max-w-3xl space-y-6">
+                        <span
+                            class="inline-block backdrop-blur-sm bg-white/20 py-1 px-4 rounded-full font-medium text-sm text-white">بیمه
+                            زندگی و سرمایه گذاری</span>
+                        <h2
+                            class="text-4xl md:text-5xl lg:text-6xl md:leading-17 lg:leading-20 font-bold">
+                            <span>همراه مطمئن شما در مسیر </span>
+                            <span class="text-amber-300">آرامش فردا</span>
+                        </h2>
+                        <p
+                            class="text-md md:text-xl max-w-2xl mb-8 leading-8 md:leading-10 font-medium text-blue-50">بیش
+                            از
+                            ۶۸ نوع بیمه‌نامه تخصصی با پشتیبانی حرفه‌ای و بهترین
+                            مشاوران. آینده خود را با اعتماد
+                            بسازید.</p>
+                        <div
+                            class="flex gap-x-2 child:py-3 child:px-7 child:rounded-xl ">
+                            <a href="#"
+                                class="bg-white text-blue-900 font-bold shadow-lg text-sm md:text-base">دریافت
+                                مشاوره رایگان</a>
+                            <a href="#"
+                                class="font-bold  border-2 transition-colors hover:bg-white/20 text-sm md:text-base">انواع
+                                بیمه‌نامه‌ها</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section -->
+            <section class="py-16 md:py-20 shadow-lg-20 bg-white">
+                <!-- Container -->
+                <div class="container mx-auto px-6 lg:px-8">
+                    <!-- Title -->
+                    <div class="space-y-4 text-center mb-18">
+                        <span class="block text-blue-600 font-medium">چرا
+                            ستارگان پیشرو</span>
+                        <h2
+                            class="text-2xl md:text-4xl font-bold text-zinc-700">بیمه‌ای
+                            متفاوت با تعهد بیشتر</h2>
+                        <span
+                            class="block w-25 h-1 rounded-full mx-auto bg-blue-600"></span>
+                    </div>
+                    <!-- Grid -->
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10">
+                        <!-- Column -->
+                        <div
+                            class="flex flex-col gap-y-5 p-6 shadow-sm hover:shadow-lg border border-zinc-200 bg-white transition-all hover:-translate-y-3 rounded-2xl  ">
+                            <div
+                                class="w-max p-5 bg-amber-400 text-white rounded-2xl shadow-2xl border border-amber-200 shadow-amber-500/50">
+                                <svg class="w-8 h-8">
+                                    <use href="#check-badge"></use>
+                                </svg>
+                            </div>
+                            <div class>
+                                <h2
+                                    class="text-xl font-bold mb-3 text-zinc-800">امنیت
+                                    و آرامش خاطر</h2>
+                                <p
+                                    class="text-zinc-700 rounded-2xl text-sm md:text-base">همراهی
+                                    با بیش از ۵ دهه تجربه در
+                                    صنعت بیمه، سرمایه‌گذاری مطمئن برای
+                                    آینده شما و خانواده.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Column -->
+                        <div
+                            class="flex flex-col gap-y-5 p-6 shadow-sm hover:shadow-lg border border-zinc-200 bg-white transition-all hover:-translate-y-3 rounded-2xl  ">
+                            <div
+                                class="w-max p-5 bg-amber-400 text-white rounded-2xl shadow-2xl border border-amber-200 shadow-amber-500/50">
+                                <svg class="w-8 h-8">
+                                    <use href="#user-group"></use>
+                                </svg>
+                            </div>
+                            <div class>
+                                <h2
+                                    class="text-xl font-bold mb-3 text-zinc-800">تیم
+                                    حرفه‌ای مدیران ارشد</h2>
+                                <p
+                                    class="text-zinc-700 rounded-2xl text-sm md:text-base">مدیران
+                                    مجرب و متخصص در حوزه
+                                    بیمه‌های عمر، درمان، خودرو و
+                                    سرمایه‌گذاری در سراسر کشور.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Column -->
+                        <div
+                            class="flex flex-col gap-y-5 p-6 shadow-sm hover:shadow-lg border border-zinc-200 bg-white transition-all hover:-translate-y-3 rounded-2xl  ">
+                            <div
+                                class="w-max p-5 bg-amber-400 text-white rounded-2xl shadow-2xl border border-amber-200 shadow-amber-500/50">
+                                <svg class="w-8 h-8">
+                                    <use href="#clipboard-document"></use>
+                                </svg>
+                            </div>
+                            <div class>
+                                <h2
+                                    class="text-xl font-bold mb-3 text-zinc-800">۶۸
+                                    نوع بیمه‌نامه تخصصی</h2>
+                                <p
+                                    class="text-zinc-700 rounded-2xl text-sm md:text-base">از
+                                    بیمه عمر و درمان تا مسئولیت و
+                                    حوادث، متناسب با تمام نیازهای
+                                    جامعه مدرن.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section -->
+                <section class="py-16 md:py-20">
+                    <!-- Container -->
+                    <div class="container mx-auto px-4 md:px-8">
+                        <!-- Grid -->
+                        <div class="grid grid-cols-1 xl:grid-cols-4 gap-5">
+                            <!-- Colunmn -->
+                            <div class="lg:col-span-3 space-y-8">
+                                <!-- Header -->
+                                <div
+                                    class="space-y-4 text-center xl:text-start">
+                                    <span
+                                        class="block text-blue-600 font-medium">شمارگان
+                                        معتبر بیمه پاسارگاد</span>
+                                    <h2
+                                        class="text-2xl md:text-4xl font-bold text-zinc-700">پیشرو
+                                        در ارائه خدمات دیجیتال
+                                        بیمه</h2>
+                                    <span
+                                        class="block xl:hidden w-25 h-1 bg-blue-600 rounded-full mx-auto"></span>
+                                    <p class="text-zinc-700 mt-5">با افتخار بیش
+                                        از ۱۲۰ هزار مشتری راضی و دفاتر نمایندگی
+                                        در ۳۱
+                                        استان
+                                        کشور، همواره پاسخگوی
+                                        نیازهای بیمه‌ای شما هستیم.</p>
+                                </div>
+                                <!-- Grid -->
+                                <div
+                                    class="grid grid-cols-2 md:grid-cols-4 gap-5">
+                                    <!-- Column -->
+                                    <div
+                                        class="flex flex-col items-center gap-y-1 py-3 rounded-lg">
+                                        <span
+                                            class="text-2xl lg:text-4xl xl:text-5xl font-bold text-blue-600">+۹۸٪</span>
+                                        <span
+                                            class="block w-5 h-0.5 mx-auto bg-zinc-200 rounded-full"></span>
+                                        <span
+                                            class="text-zinc-500 text-xs">رضایت
+                                            مشتریان</span>
+
+                                    </div>
+                                    <!-- Column -->
+                                    <div
+                                        class="flex flex-col items-center gap-y-1 py-3 rounded-lg">
+                                        <span
+                                            class="text-2xl lg:text-4xl xl:text-5xl font-bold text-blue-600">۳۱</span>
+                                        <span
+                                            class="block w-5 h-0.5 mx-auto bg-zinc-200 rounded-full"></span>
+                                        <span
+                                            class="text-zinc-500 text-xs">استان
+                                            فعال</span>
+
+                                    </div>
+                                    <!-- Column -->
+                                    <div
+                                        class="flex flex-col items-center gap-y-1 py-3 rounded-lg">
+                                        <span
+                                            class="text-2xl lg:text-4xl xl:text-5xl font-bold text-blue-600">۶۸</span>
+                                        <span
+                                            class="block w-5 h-0.5 mx-auto bg-zinc-200 rounded-full"></span>
+                                        <span class="text-zinc-500 text-xs">نوع
+                                            بیمه‌نامه</span>
+
+                                    </div>
+                                    <!-- Column -->
+                                    <div
+                                        class="flex flex-col items-center gap-y-1 py-3 rounded-lg">
+                                        <span
+                                            class="text-2xl lg:text-4xl xl:text-5xl font-bold text-blue-600">۲۴/۷</span>
+                                        <span
+                                            class="block w-5 h-0.5 mx-auto bg-zinc-200 rounded-full"></span>
+                                        <span
+                                            class="text-zinc-500 text-xs">پشتیبانی
+                                            آنلاین</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Column -->
+                            <div class="hidden xl:block">
+                                <div class="p-2">
+                                    <img src="./images/pasargad/download.png"
+                                        alt="بیمه پاسارگاد"
+                                        title="بیمه پاسارگاد"
+                                        loading="lazy"
+                                        class="w-full h-full rounded-3xl">
+                                </div>
+                            </div>
+                        </div>
                         <a href="#"
-                            class="font-bold  border-2 transition-colors hover:bg-white/20 text-sm md:text-base">انواع
-                            بیمه‌نامه‌ها</a>
+                            class="flex gap-x-1 mt-10 text-sm w-max mx-auto xl:mx-0 text-zinc-500 font-medium transition-all group hover:text-blue-600">
+                            <span> مشاهده تمام خدمات</span>
+                            <svg
+                                class="w-5 h-5 group-hover:-translate-x-1 transition-all">
+                                <use href="#chevron-left"></use>
+                            </svg>
+                        </a>
                     </div>
-                </div>
-            </div>
-        </section>
+                </section>
 
-        <!-- Section -->
-        <section class="py-16 md:py-20 shadow-lg-20 bg-white">
-            <!-- Container -->
-            <div class="container mx-auto px-6 lg:px-8">
-                <!-- Title -->
-                <div class="space-y-4 text-center mb-18">
-                    <span class="block text-blue-600 font-medium">چرا ستارگان پیشرو</span>
-                    <h2 class="text-2xl md:text-4xl font-bold text-zinc-700">بیمه‌ای متفاوت با تعهد بیشتر</h2>
-                    <span class="block w-25 h-1 rounded-full mx-auto bg-blue-600"></span>
-                </div>
-                <!-- Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10">
-                    <!-- Column -->
-                    <div
-                        class="flex flex-col gap-y-5 p-6 shadow-sm hover:shadow-lg border border-zinc-200 bg-white transition-all hover:-translate-y-3 rounded-2xl  ">
-                        <div
-                            class="w-max p-5 bg-amber-400 text-white rounded-2xl shadow-2xl border border-amber-200 shadow-amber-500/50">
-                            <svg class="w-8 h-8">
-                                <use href="#check-badge"></use>
-                            </svg>
-                        </div>
-                        <div class="">
-                            <h2 class="text-xl font-bold mb-3 text-zinc-800">امنیت و آرامش خاطر</h2>
-                            <p class="text-zinc-700 rounded-2xl text-sm md:text-base">همراهی با بیش از ۵ دهه تجربه در
-                                صنعت بیمه، سرمایه‌گذاری مطمئن برای
-                                آینده شما و خانواده.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- Column -->
-                    <div
-                        class="flex flex-col gap-y-5 p-6 shadow-sm hover:shadow-lg border border-zinc-200 bg-white transition-all hover:-translate-y-3 rounded-2xl  ">
-                        <div
-                            class="w-max p-5 bg-amber-400 text-white rounded-2xl shadow-2xl border border-amber-200 shadow-amber-500/50">
-                            <svg class="w-8 h-8">
-                                <use href="#user-group"></use>
-                            </svg>
-                        </div>
-                        <div class="">
-                            <h2 class="text-xl font-bold mb-3 text-zinc-800">تیم حرفه‌ای مدیران ارشد</h2>
-                            <p class="text-zinc-700 rounded-2xl text-sm md:text-base">مدیران مجرب و متخصص در حوزه
-                                بیمه‌های عمر، درمان، خودرو و
-                                سرمایه‌گذاری در سراسر کشور.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- Column -->
-                    <div
-                        class="flex flex-col gap-y-5 p-6 shadow-sm hover:shadow-lg border border-zinc-200 bg-white transition-all hover:-translate-y-3 rounded-2xl  ">
-                        <div
-                            class="w-max p-5 bg-amber-400 text-white rounded-2xl shadow-2xl border border-amber-200 shadow-amber-500/50">
-                            <svg class="w-8 h-8">
-                                <use href="#clipboard-document"></use>
-                            </svg>
-                        </div>
-                        <div class="">
-                            <h2 class="text-xl font-bold mb-3 text-zinc-800">۶۸ نوع بیمه‌نامه تخصصی</h2>
-                            <p class="text-zinc-700 rounded-2xl text-sm md:text-base">از بیمه عمر و درمان تا مسئولیت و
-                                حوادث، متناسب با تمام نیازهای
-                                جامعه مدرن.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section -->
-        <section class="py-16 md:py-20">
-            <!-- Container -->
-            <div class="container mx-auto px-4 md:px-8">
-                <!-- Grid -->
-                <div class="grid grid-cols-1 xl:grid-cols-4 gap-5">
-                    <!-- Colunmn -->
-                    <div class="lg:col-span-3 space-y-8">
-                        <!-- Header -->
-                        <div class="space-y-4 text-center xl:text-start">
-                            <span class="block text-blue-600 font-medium">شمارگان معتبر بیمه پاسارگاد</span>
-                            <h2 class="text-2xl md:text-4xl font-bold text-zinc-700">پیشرو در ارائه خدمات دیجیتال
-                                بیمه</h2>
-                            <span class="block xl:hidden w-25 h-1 bg-blue-600 rounded-full mx-auto"></span>
-                            <p class="text-zinc-700 mt-5">با افتخار بیش از ۱۲۰ هزار مشتری راضی و دفاتر نمایندگی در ۳۱
-                                استان
-                                کشور، همواره پاسخگوی
-                                نیازهای بیمه‌ای شما هستیم.</p>
+                <!-- Section -->
+                <section class="py-16 md:py-20">
+                    <!-- Container -->
+                    <div class="container mx-auto px-4 md:px-8">
+                        <!-- Title -->
+                        <div class="text-center mb-18">
+                            <h2
+                                class="text-2xl md:text-4xl font-bold text-zinc-700">محبوب‌ترین
+                                بیمه‌نامه‌ها</h2>
+                            <span class="text-sm text-zinc-500">انتخاب هوشمند
+                                ایرانیان</span>
                         </div>
                         <!-- Grid -->
-                        <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+                        <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
                             <!-- Column -->
-                            <div class="flex flex-col items-center gap-y-1 py-3 rounded-lg">
-                                <span class="text-2xl lg:text-4xl xl:text-5xl font-bold text-blue-600">+۹۸٪</span>
-                                <span class="block w-5 h-0.5 mx-auto bg-zinc-200 rounded-full"></span>
-                                <span class="text-zinc-500 text-xs">رضایت مشتریان</span>
-
-                            </div>
-                            <!-- Column -->
-                            <div class="flex flex-col items-center gap-y-1 py-3 rounded-lg">
-                                <span class="text-2xl lg:text-4xl xl:text-5xl font-bold text-blue-600">۳۱</span>
-                                <span class="block w-5 h-0.5 mx-auto bg-zinc-200 rounded-full"></span>
-                                <span class="text-zinc-500 text-xs">استان فعال</span>
-
-                            </div>
-                            <!-- Column -->
-                            <div class="flex flex-col items-center gap-y-1 py-3 rounded-lg">
-                                <span class="text-2xl lg:text-4xl xl:text-5xl font-bold text-blue-600">۶۸</span>
-                                <span class="block w-5 h-0.5 mx-auto bg-zinc-200 rounded-full"></span>
-                                <span class="text-zinc-500 text-xs">نوع بیمه‌نامه</span>
-
-                            </div>
-                            <!-- Column -->
-                            <div class="flex flex-col items-center gap-y-1 py-3 rounded-lg">
-                                <span class="text-2xl lg:text-4xl xl:text-5xl font-bold text-blue-600">۲۴/۷</span>
-                                <span class="block w-5 h-0.5 mx-auto bg-zinc-200 rounded-full"></span>
-                                <span class="text-zinc-500 text-xs">پشتیبانی آنلاین</span>
-
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Column -->
-                    <div class="hidden xl:block">
-                        <div class="p-2">
-                            <img src="./images/pasargad/download.png" alt="بیمه پاسارگاد" title="بیمه پاسارگاد"
-                                loading="lazy" class="w-full h-full rounded-3xl">
-                        </div>
-                    </div>
-                </div>
-                <a href="#"
-                    class="flex gap-x-1 mt-10 text-sm w-max mx-auto xl:mx-0 text-zinc-500 font-medium transition-all group hover:text-blue-600">
-                    <span> مشاهده تمام خدمات</span>
-                    <svg class="w-5 h-5 group-hover:-translate-x-1 transition-all">
-                        <use href="#chevron-left"></use>
-                    </svg>
-                </a>
-            </div>
-        </section>
-
-        <!-- Section -->
-        <section class="py-16 md:py-20">
-            <!-- Container -->
-            <div class="container mx-auto px-4 md:px-8">
-                <!-- Title -->
-                <div class="text-center mb-18">
-                    <h2 class="text-2xl md:text-4xl font-bold text-zinc-700">محبوب‌ترین بیمه‌نامه‌ها</h2>
-                    <span class="text-sm text-zinc-500">انتخاب هوشمند ایرانیان</span>
-                </div>
-                <!-- Grid -->
-                <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
-                    <!-- Column -->
-                    <div
-                        class="flex flex-col gap-y-2 items-center justify-center p-5 bg-white border border-zinc-200 rounded-2xl">
-                        <!-- Icon -->
-                        <div class="flex items-center justify-center text-5xl w-20 h-20 rounded-full">
-                            🏆
-                        </div>
-                        <div class="text-center">
-                            <h4 class="text-base lg:text-lg font-bold text-zinc-700">بیمه عمر</h4>
-                            <span class="block text-zinc-500 text-xs lg:text-sm">سرمایه‌گذاری بلندمدت</span>
-                        </div>
-                    </div>
-                    <!-- Column -->
-                    <div
-                        class="flex flex-col gap-y-2 items-center justify-center p-5 bg-white border border-zinc-200 rounded-2xl">
-                        <!-- Icon -->
-                        <div class="flex items-center justify-center text-5xl w-20 h-20 rounded-full">
-                            🏆
-                        </div>
-                        <div class="text-center">
-                            <h4 class="text-base lg:text-lg font-bold text-zinc-700">بیمه شخص ثالث</h4>
-                            <span class="block text-zinc-500 text-xs lg:text-sm">خودرو و مسئولیت</span>
-                        </div>
-                    </div>
-                    <!-- Column -->
-                    <div
-                        class="flex flex-col gap-y-2 items-center justify-center p-5 bg-white border border-zinc-200 rounded-2xl">
-                        <!-- Icon -->
-                        <div class="flex items-center justify-center text-5xl w-20 h-20 rounded-full">
-                            🏆
-                        </div>
-                        <div class="text-center">
-                            <h4 class="text-base lg:text-lg font-bold text-zinc-700">ببیمه درمان تکمیلی</h4>
-                            <span class="block text-zinc-500 text-xs lg:text-sm">پوشش پیشرفته پزشکی</span>
-                        </div>
-                    </div>
-                    <!-- Column -->
-                    <div
-                        class="flex flex-col gap-y-2 items-center justify-center p-5 bg-white border border-zinc-200 rounded-2xl">
-                        <!-- Icon -->
-                        <div class="flex items-center justify-center text-5xl w-20 h-20 rounded-full">
-                            🏆
-                        </div>
-                        <div class="text-center">
-                            <h4 class="text-base lg:text-lg font-bold text-zinc-700">بیمه مسافرتی</h4>
-                            <span class="block text-zinc-500 text-xs lg:text-sm">سفرهای داخلی و خارجی</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section -->
-        <section class="py-16 md:py-20">
-            <!-- Container -->
-            <div class="container mx-auto px-4 md:px-8 ">
-                <!-- Title -->
-                <div class="space-y-4 text-center mb-18">
-                    <span class="block font-medium text-blue-600">سکانداران اعتماد</span>
-                    <h2 class="text-2xl md:text-4xl font-bold text-zinc-700">مدیران ارشد و تیم حرفه‌ای</h2>
-                    <span class="block w-25 h-1 mx-auto bg-blue-600 rounded-full"></span>
-                </div>
-                <!-- Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 rounded-2xl">
-                    <!-- Column -->
-                    <div
-                        class="p-5 space-y-4 rounded-2xl shadow-sm bg-linear-to-br from-gray-400 to-amber-50 border border-zinc-300 transition-transform hover:-translate-y-2 hover:shadow-2xl/10 bg-white">
-                        <!-- Header -->
-                        <div
-                            class="w-max mx-auto rounded-2xl overflow-hidden bg-white/50 border border-zinc-100 shadow-2xl shadow-white/80">
-                            <!-- Avatar -->
-                            <img src="./images/avatars/9375451_avatars_accounts_man_male_people_icon.png" alt="کاربر"
-                                title="دکتر احد کریمی" class="w-20 h-20 lg:w-20 lg:h-20 object-cover" loading="lazy">
-                        </div>
-                        <!-- Body -->
-                        <div class="text-center">
-                            <h3 class=" text-lg md:text-xl mt-2 font-bold text-zinc-700">دکتر احمد کریمی</h3>
-                            <span class="text-xs text-blue-600">مدیر ارشد اجرایی</span>
-                            <p class="mt-3 text-zinc-500 text-sm">بیش از ۲۰ سال تجربه در صنعت بیمه و سرمایه</p>
-                        </div>
-                    </div>
-                    <!-- Column -->
-                    <div
-                        class="p-5 space-y-4 rounded-2xl shadow-sm bg-linear-to-br from-gray-400 to-amber-50 border border-zinc-300 transition-transform hover:-translate-y-2 hover:shadow-2xl/10 bg-white">
-                        <!-- Header -->
-                        <div
-                            class="w-max mx-auto rounded-2xl overflow-hidden bg-white/50 border border-zinc-100 shadow-2xl shadow-white/80">
-                            <!-- Avatar -->
-                            <img src="./images/avatars/9375508_avatars_accounts_man_male_people_icon.png"
-                                alt="مهندس سارا حسینی" title="مهندس سارا حسینی"
-                                class="w-20 h-20 lg:w-20 lg:h-20 object-cover" loading="lazy">
-                        </div>
-                        <!-- Body -->
-                        <div class="text-center">
-                            <h3 class=" text-lg md:text-xl mt-2 font-bold text-zinc-700">مهندس سارا حسینی</h3>
-                            <span class="text-xs text-blue-600">معاون مدیر ارشد</span>
-                            <p class="mt-3 text-zinc-500 text-sm">طراح سیستم‌های نوین فروش بیمه</p>
-                        </div>
-                    </div> <!-- Column -->
-                    <div
-                        class="p-5 space-y-4 rounded-2xl shadow-sm bg-linear-to-br from-gray-400 to-amber-50 border border-zinc-300 transition-transform hover:-translate-y-2 hover:shadow-2xl/10 bg-white">
-                        <!-- Header -->
-                        <div
-                            class="w-max mx-auto rounded-2xl overflow-hidden bg-white/50 border border-zinc-100 shadow-2xl shadow-white/80">
-                            <!-- Avatar -->
-                            <img src="./images/avatars/9375573_avatars_accounts_man_male_people_icon.png"
-                                alt="رضا محمدی" title="رضا محمدی" class="w-20 h-20 lg:w-20 lg:h-20 object-cover"
-                                loading="lazy">
-                        </div>
-                        <!-- Body -->
-                        <div class="text-center">
-                            <h3 class=" text-lg md:text-xl mt-2 font-bold text-zinc-700">رضا محمدی</h3>
-                            <span class="text-xs text-blue-600">مدیر توسعه فروش</span>
-                            <p class="mt-3 text-zinc-500 text-sm">راهبری تیم‌های فروش در استان‌ها</p>
-                        </div>
-                    </div>
-                </div>
-                <a href="#"
-                    class="group flex items-center gap-x-1 mt-10 w-max mx-auto py-2 px-4 text-sm font-medium rounded-full transition-all text-zinc-700 hover:text-blue-600">
-
-                    مشاهده تمام مدیران
-                    <svg class="w-5 h-5 transition-all group-hover:-translate-x-1">
-                        <use href="#chevron-left"></use>
-                    </svg>
-                </a>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="mt-10 pt-14 bg-zinc-700">
-            <!-- Container -->
-            <div class="container mx-auto px-4 md:px-8">
-                <!-- Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-7 gap-y-10">
-                    <!-- Column -->
-                    <div class="space-y-3">
-                        <div class="flex gap-x-3">
                             <div
-                                class="flex items-center  justify-center w-8 h-8 shadow-xl/50 border border-zinc-500 shadow-amber-200 bg-zinc-700 rounded-full ">
-                                <img src="./images/icons8-star-94.png" alt="ستارگان پیشرو" title="ستارگان پیشرو"
-                                    loading="lazy" class="w-5 h-5">
+                                class="flex flex-col gap-y-2 items-center justify-center p-5 bg-white border border-zinc-200 rounded-2xl">
+                                <!-- Icon -->
+                                <div
+                                    class="flex items-center justify-center text-5xl w-20 h-20 rounded-full">
+                                    🏆
+                                </div>
+                                <div class="text-center">
+                                    <h4
+                                        class="text-base lg:text-lg font-bold text-zinc-700">بیمه
+                                        عمر</h4>
+                                    <span
+                                        class="block text-zinc-500 text-xs lg:text-sm">سرمایه‌گذاری
+                                        بلندمدت</span>
+                                </div>
                             </div>
+                            <!-- Column -->
+                            <div
+                                class="flex flex-col gap-y-2 items-center justify-center p-5 bg-white border border-zinc-200 rounded-2xl">
+                                <!-- Icon -->
+                                <div
+                                    class="flex items-center justify-center text-5xl w-20 h-20 rounded-full">
+                                    🏆
+                                </div>
+                                <div class="text-center">
+                                    <h4
+                                        class="text-base lg:text-lg font-bold text-zinc-700">بیمه
+                                        شخص ثالث</h4>
+                                    <span
+                                        class="block text-zinc-500 text-xs lg:text-sm">خودرو
+                                        و مسئولیت</span>
+                                </div>
+                            </div>
+                            <!-- Column -->
+                            <div
+                                class="flex flex-col gap-y-2 items-center justify-center p-5 bg-white border border-zinc-200 rounded-2xl">
+                                <!-- Icon -->
+                                <div
+                                    class="flex items-center justify-center text-5xl w-20 h-20 rounded-full">
+                                    🏆
+                                </div>
+                                <div class="text-center">
+                                    <h4
+                                        class="text-base lg:text-lg font-bold text-zinc-700">ببیمه
+                                        درمان تکمیلی</h4>
+                                    <span
+                                        class="block text-zinc-500 text-xs lg:text-sm">پوشش
+                                        پیشرفته پزشکی</span>
+                                </div>
+                            </div>
+                            <!-- Column -->
+                            <div
+                                class="flex flex-col gap-y-2 items-center justify-center p-5 bg-white border border-zinc-200 rounded-2xl">
+                                <!-- Icon -->
+                                <div
+                                    class="flex items-center justify-center text-5xl w-20 h-20 rounded-full">
+                                    🏆
+                                </div>
+                                <div class="text-center">
+                                    <h4
+                                        class="text-base lg:text-lg font-bold text-zinc-700">بیمه
+                                        مسافرتی</h4>
+                                    <span
+                                        class="block text-zinc-500 text-xs lg:text-sm">سفرهای
+                                        داخلی و خارجی</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-                            <h3 class="text-base lg:text-xl font-bold text-zinc-200">ستارگان پیشرو</h3>
-                        </div>
-                        <p class="border-r-2 border-blue-500 pr-5 text-sm leading-6 tracking-tight text-zinc-400">
-                            ارائه بهترین خدمات بیمه و سرمایه‌گذاری با <span class="text-blue-600 font-bold">۶۸ نوع
-                                بیمه‌نامه تخصصی</span> و تیم مجرب. همراه شما در
-                            مسیر امنیت مالی.</p>
-                        <div class="space-x-2">
+                <!-- Section -->
+                <section class="py-16 md:py-20">
+                    <!-- Container -->
+                    <div class="container mx-auto px-4 md:px-8 ">
+                        <!-- Title -->
+                        <div class="space-y-4 text-center mb-18">
                             <span
-                                class="py-1 px-3 bg-amber-50 text-xs rounded-full border border-amber-200 text-amber-700">رتبه
-                                برتر بیمه</span>
+                                class="block font-medium text-blue-600">سکانداران
+                                اعتماد</span>
+                            <h2
+                                class="text-2xl md:text-4xl font-bold text-zinc-700">مدیران
+                                ارشد و تیم حرفه‌ای</h2>
                             <span
-                                class="py-1 px-3 bg-blue-50 text-xs rounded-full border border-blue-200 text-blue-700">۱۴۰۴</span>
+                                class="block w-25 h-1 mx-auto bg-blue-600 rounded-full"></span>
                         </div>
-                    </div>
-                    <!-- Column -->
-                    <div class="space-y-3">
-                        <h3 class="text-base lg:text-xl font-bold text-zinc-200">خدمات مشتریان</h3>
-                        <ul class="space-y-2 text-sm text-zinc-400">
-                            <li>
-                                <a href="#"
-                                    class="inline-flex items-center gap-x-1 transition-all hover:text-blue-500 hover:-translate-x-1">
-                                    <svg class="w-3 h-3">
-                                        <use href="#minus"></use>
-                                    </svg>
-                                    <span>پنل کاربری</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="inline-flex items-center gap-x-1 transition-all hover:text-blue-500 hover:-translate-x-1">
-                                    <svg class="w-3 h-3">
-                                        <use href="#minus"></use>
-                                    </svg>
-                                    <span>ثبت سفارش</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="inline-flex items-center gap-x-1 transition-all hover:text-blue-500 hover:-translate-x-1">
-                                    <svg class="w-3 h-3">
-                                        <use href="#minus"></use>
-                                    </svg>
-                                    <span>مشاهده وضعیت</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="inline-flex items-center gap-x-1 transition-all hover:text-blue-500 hover:-translate-x-1">
-                                    <svg class="w-3 h-3">
-                                        <use href="#minus"></use>
-                                    </svg>
-                                    <span>تیکت پشتیبانی</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- Column -->
-                    <div class="space-y-3">
-                        <h3 class="text-base lg:text-xl font-bold text-zinc-200">دسترسی سریع</h3>
-                        <ul class="space-y-2 text-sm  text-zinc-400">
-                            <li>
-                                <a href="#"
-                                    class="inline-flex items-center gap-x-1 transition-all hover:text-blue-500 hover:-translate-x-1">
-                                    <svg class="w-3 h-3">
-                                        <use href="#minus"></use>
-                                    </svg>
-                                    <span>درباره ما</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="inline-flex items-center gap-x-1 transition-all hover:text-blue-500 hover:-translate-x-1">
-                                    <svg class="w-3 h-3">
-                                        <use href="#minus"></use>
-                                    </svg>
-                                    <span>تماس با ما</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="inline-flex items-center gap-x-1 transition-all hover:text-blue-500 hover:-translate-x-1">
-                                    <svg class="w-3 h-3">
-                                        <use href="#minus"></use>
-                                    </svg>
-                                    <span>قوانین و مقررات</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="inline-flex items-center gap-x-1 transition-all hover:text-blue-500 hover:-translate-x-1">
-                                    <svg class="w-3 h-3">
-                                        <use href="#minus"></use>
-                                    </svg>
-                                    <span>حریم خصوصی</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="inline-flex items-center gap-x-1 transition-all hover:text-blue-500 hover:-translate-x-1">
-                                    <svg class="w-3 h-3">
-                                        <use href="#minus"></use>
-                                    </svg>
-                                    <span>سوالات متداول</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- Column -->
-                    <div class="space-y-3">
-                        <h3 class="text-base lg:text-xl font-bold text-zinc-200">شبکه های اجتماعی</h3>
-                        <div class="flex items-center gap-x-4">
-                            <a href="#"
-                                class="p-2 rounded-full transition-all hover:-translate-y-1 hover:shadow-lg hover:bg-blue-500 hover:text-blue-400 hover:outline-1 hover:outline-blue-500 hover:outline-offset-2 text-blue-500">
-                                <svg class="w-5 h-5">
-                                    <use href="#telegram"></use>
-                                </svg>
-                            </a>
-                            <a href="#"
-                                class="p-2 rounded-full transition-all hover:-translate-y-1 hover:shadow-lg hover:bg-purple-800 hover:text-purple-400 hover:outline-1 hover:outline-purple-800 hover:outline-offset-2 text-purple-800">
-                                <svg class="w-5 h-5">
-                                    <use href="#instagram"></use>
-                                </svg>
-                            </a>
-                            <a href="#"
-                                class="p-2 rounded-full transition-all hover:-translate-y-1 hover:shadow-lg hover:bg-black hover:text-white hover:outline-1 hover:outline-black hover:outline-offset-2">
-                                <svg class="w-5 h-5">
-                                    <use href="#twitter"></use>
-                                </svg>
-                            </a>
-                        </div>
+                        <!-- Grid -->
                         <div
-                            class="mt-5 p-3 rounded-2xl bg-linear-to-br from-white to-blue-50/30 border border-gray-300">
-                            <h5 class="text-sm font-medium">عضویت در خبرنامه</h5>
-                            <span class="text-xs text-zinc-500 font-light">از تخفیف‌های ویژه باخبر شوید</span>
-                            <form class="flex gap-x-2 mt-2">
-                                <input type="email"
-                                    class="w-full py-2 px-2 border border-gray-200 text-xs rounded-lg bg-white focus:outline-1 focus:outline-blue-500"
-                                    placeholder="ایمیل خود را وارد کنید..." required>
-                                <button
-                                    class="rounded-lg text-white bg-amber-500 px-3 py-0.5 text-sm shadow-lg shadow-amber-500/50">ثبت</button>
+                            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 rounded-2xl">
+                            <!-- Column -->
+                            <div
+                                class="p-5 space-y-4 rounded-2xl shadow-sm bg-linear-to-br from-gray-400 to-amber-50 border border-zinc-300 transition-transform hover:-translate-y-2 hover:shadow-2xl/10 bg-white">
+                                <!-- Header -->
+                                <div
+                                    class="w-max mx-auto rounded-2xl overflow-hidden bg-white/50 border border-zinc-100 shadow-2xl shadow-white/80">
+                                    <!-- Avatar -->
+                                    <img
+                                        src="./images/avatars/9375451_avatars_accounts_man_male_people_icon.png"
+                                        alt="کاربر"
+                                        title="دکتر احد کریمی"
+                                        class="w-20 h-20 lg:w-20 lg:h-20 object-cover"
+                                        loading="lazy">
+                                </div>
+                                <!-- Body -->
+                                <div class="text-center">
+                                    <h3
+                                        class=" text-lg md:text-xl mt-2 font-bold text-zinc-700">دکتر
+                                        احمد کریمی</h3>
+                                    <span class="text-xs text-blue-600">مدیر
+                                        ارشد اجرایی</span>
+                                    <p class="mt-3 text-zinc-500 text-sm">بیش از
+                                        ۲۰ سال تجربه در صنعت بیمه و سرمایه</p>
+                                </div>
+                            </div>
+                            <!-- Column -->
+                            <div
+                                class="p-5 space-y-4 rounded-2xl shadow-sm bg-linear-to-br from-gray-400 to-amber-50 border border-zinc-300 transition-transform hover:-translate-y-2 hover:shadow-2xl/10 bg-white">
+                                <!-- Header -->
+                                <div
+                                    class="w-max mx-auto rounded-2xl overflow-hidden bg-white/50 border border-zinc-100 shadow-2xl shadow-white/80">
+                                    <!-- Avatar -->
+                                    <img
+                                        src="./images/avatars/9375508_avatars_accounts_man_male_people_icon.png"
+                                        alt="مهندس سارا حسینی"
+                                        title="مهندس سارا حسینی"
+                                        class="w-20 h-20 lg:w-20 lg:h-20 object-cover"
+                                        loading="lazy">
+                                </div>
+                                <!-- Body -->
+                                <div class="text-center">
+                                    <h3
+                                        class=" text-lg md:text-xl mt-2 font-bold text-zinc-700">مهندس
+                                        سارا حسینی</h3>
+                                    <span class="text-xs text-blue-600">معاون
+                                        مدیر ارشد</span>
+                                    <p class="mt-3 text-zinc-500 text-sm">طراح
+                                        سیستم‌های نوین فروش بیمه</p>
+                                </div>
+                            </div> <!-- Column -->
+                            <div
+                                class="p-5 space-y-4 rounded-2xl shadow-sm bg-linear-to-br from-gray-400 to-amber-50 border border-zinc-300 transition-transform hover:-translate-y-2 hover:shadow-2xl/10 bg-white">
+                                <!-- Header -->
+                                <div
+                                    class="w-max mx-auto rounded-2xl overflow-hidden bg-white/50 border border-zinc-100 shadow-2xl shadow-white/80">
+                                    <!-- Avatar -->
+                                    <img
+                                        src="./images/avatars/9375573_avatars_accounts_man_male_people_icon.png"
+                                        alt="رضا محمدی" title="رضا محمدی"
+                                        class="w-20 h-20 lg:w-20 lg:h-20 object-cover"
+                                        loading="lazy">
+                                </div>
+                                <!-- Body -->
+                                <div class="text-center">
+                                    <h3
+                                        class=" text-lg md:text-xl mt-2 font-bold text-zinc-700">رضا
+                                        محمدی</h3>
+                                    <span class="text-xs text-blue-600">مدیر
+                                        توسعه فروش</span>
+                                    <p class="mt-3 text-zinc-500 text-sm">راهبری
+                                        تیم‌های فروش در استان‌ها</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#"
+                            class="group flex items-center gap-x-1 mt-10 w-max mx-auto py-2 px-4 text-sm font-medium rounded-full transition-all text-zinc-700 hover:text-blue-600">
+
+                            مشاهده تمام مدیران
+                            <svg
+                                class="w-5 h-5 transition-all group-hover:-translate-x-1">
+                                <use href="#chevron-left"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </section>
+                <!-- Contact us -->
+                <section class="mb-10 md:mb-20">
+                    <div class="container mx-auto px-4 md:px-8">
+                        <!-- Section Head -->
+                        <div class="flex flex-col items-center mb-14">
+                            <span class="section-label">تماس با ما</span>
+                            <h1 class="section-title">با ما در ارتباط باشید</h1>
+                        </div>
+                        <!-- Section Content -->
+                        <div
+                            class="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
+                            <!-- Column -->
+                            <div class="flex flex-col gap-y-5">
+                                <div
+                                    class="flex gap-x-4 p-6 rounded-xl items-start bg-white border border-gray-100 transition-shadow hover:shadow-md">
+                                    <div
+                                        class="p-5 rounded-xl text-blue-600 bg-blue-100">
+                                        <svg class="w-6 h-6">
+                                            <use href="#phone"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="space-y-1">
+                                        <h4 class="font-bold">تماس تلفنی</h4>
+                                        <p class="text-sm text-zinc-500">۲۴
+                                            ساعته پاسخگوی شما هستیم</p>
+                                        <a href="#"
+                                            class="block mt-2 font-bold text-blue-600">۰۲۱-۸۸۴۴-۵۵۶۶</a>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex gap-x-4 p-6 rounded-xl items-start bg-white border border-gray-100 transition-shadow hover:shadow-md">
+                                    <div
+                                        class="p-5 rounded-xl text-amber-600 bg-amber-100">
+                                        <svg class="w-6 h-6">
+                                            <use href="#mail"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="space-y-1">
+                                        <h4 class="font-bold">ایمیل</h4>
+                                        <p class="text-sm text-zinc-500">پاسخ در
+                                            کمتر از ۲ ساعت</p>
+                                        <a href="#"
+                                            class="block mt-2 font-bold text-blue-600">info@setaregan.ir</a>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex gap-x-4 p-6 rounded-xl items-start bg-white border border-gray-100 transition-shadow hover:shadow-md">
+                                    <div
+                                        class="p-5 rounded-xl text-green-600 bg-green-100">
+                                        <svg class="w-6 h-6">
+                                            <use href="#map-pin"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="space-y-1">
+                                        <h4 class="font-bold">آدرس دفتر
+                                            مرکزی</h4>
+                                        <p class="text-sm text-zinc-500">تهران،
+                                            خیابان ولیعصر، نرسیده به پارک ساعی،
+                                            پلاک ۱۲۴۶</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Column -->
+                            <div class="p-8 bg-white border border-gray-100 rounded-xl">
+                                <!-- Title -->
+                                <h3
+                                    class="text-lg text-gray-900 font-bold mb-5">درخواست
+                                    مشاوره رایگان</h3>
+                                <!-- Form -->
+                                <form action class="space-y-4">
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div class="space-y-1.5">
+                                            <label for
+                                                class="block text-sm text-zinc-700">نام
+                                                و نام خانوادگی</label>
+                                            <input type="text"
+                                                class="w-full py-3 px-4 outline-none border border-gray-200 rounded-xl text-sm text-zinc-500 "
+                                                placeholder="محمد محمدی">
+                                        </div>
+                                        <div class="space-y-1.5">
+                                            <label for
+                                                class="block text-sm text-zinc-700">شماره
+                                                موبایل</label>
+                                            <input type="text"
+                                                class="w-full py-3 px-4 outline-none border border-gray-200 rounded-xl text-sm text-zinc-500"
+                                                placeholder="۰۹۱۲..." dir="ltr">
+                                        </div>
+                                    </div>
+                                    <div class="block space-y-1.5">
+                                        <label for
+                                            class="block text-sm text-zinc-700">نوع
+                                            بیمه مورد نظر</label>
+                                        <select name id
+                                            class="w-full py-3 px-4 rounded-xl outline-none focus:border-blue-600 transition-all bg-white border border-gray-200 text-sm text-zinc-500">
+                                            <option>انتخاب کنید...</option>
+                                            سرمایه‌گذاری</option>
+                                        <option>بیمه شخص ثالث</option>
+                                        <option>بیمه درمان
+                                            تکمیلی</option>
+                                        <option>بیمه مسافرتی</option>
+                                        <option>بیمه آتش‌سوزی</option>
+                                        <option>سایر</option>
+                                    </select>
+                                </div>
+                                <div class="block space-y-1.5">
+                                    <label for=""  class="block text-sm text-zinc-700">توضیحات (اختیاری)</label>
+                                    <textarea rows="3" name="" id="" class="w-full resize-none outline-none rounded-xl py-3 px-4 transition-all focus:border-blue-600 border border-gray-200 text-sm text-zinc-500" placeholder="سوال یا درخواست خود را بنویسید..."></textarea>
+                                </div>
+                                <button type="submit" class="w-full py-3 bg-amber-500 rounded-xl cursor-pointer font-medium transition-all transform hover:-translate-y-0.5 text-sm">ارسال و دریافت مشاوره رایگان</button>
+                                <p class="text-xs mt-1.5 text-center text-gray-500">اطلاعات شما محرمانه است و فقط برای ارتباط استفاده می‌شود</p>
                             </form>
                         </div>
                     </div>
                 </div>
-                <!-- Enamad -->
-                <div
-                    class="flex flex-col-reverse md:flex-row gap-y-5 justify-between items-center mt-14 pt-10 border-t border-white/10">
-                    <div class="flex text-xs space-x-4">
-                        <span class="flex items-center gap-x-1 py-1 px-2 rounded-full text-emerald-500 bg-zinc-600">
-                            <svg class="w-3 h-3">
-                                <use href="#check-circle"></use>
-                            </svg>
-                            <span>نماد اعتماد</span>
-                        </span>
-                        <span class="flex items-center gap-x-1 py-1 px-2 rounded-full text-emerald-500 bg-zinc-600">
-                            <svg class="w-3 h-3">
-                                <use href="#check-circle"></use>
-                            </svg>
-                            <span>تظمین کیفیت</span>
-                        </span>
-                        <span class="flex items-center gap-x-1 py-1 px-2 rounded-full text-emerald-500 bg-zinc-600">
-                            <svg class="w-3 h-3">
-                                <use href="#check-circle"></use>
-                            </svg>
-                            <span>طراحی مدرن</span>
-                        </span>
-                    </div>
-                    <div class="shadow-sm p-2 rounded-2xl transition-all hover:shadow-xl bg-white">
-                        <a href="#">
-                            <img src="./images/enamad.png" alt="نماد الکترونیکی" title="نماد الکترونیکی"
-                                class="w-15 h-15" loading="lazy">
-                        </a>
-                    </div>
-                </div>
-                <!-- Copyright -->
-                <div class="mt-10 py-8 border-t border-white/10 text-center">
-                    <p class="text-sm  text-zinc-400">© تمامی حقوق برای ستارگان پیشرو پایدار محفوظ است.</p>
-                </div>
-            </div>
-        </footer>
-    </main>
-    <div class="overlay"></div>
+            </section>
+            <!-- Footer -->
+            <footer class="mt-10 pt-14 bg-zinc-700">
+                <!-- Container -->
+                <div class="container mx-auto px-4 md:px-8">
+                    <!-- Grid -->
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-7 gap-y-10">
+                        <!-- Column -->
+                        <div class="space-y-3">
+                            <div class="flex gap-x-3">
+                                <div
+                                    class="flex items-center  justify-center w-8 h-8 shadow-xl/50 border border-zinc-500 shadow-amber-200 bg-zinc-700 rounded-full ">
+                                    <img src="./images/icons8-star-94.png"
+                                        alt="ستارگان پیشرو"
+                                        title="ستارگان پیشرو"
+                                        loading="lazy" class="w-5 h-5">
+                                </div>
 
-    <script src="./scripts/app.js"></script>
-</body>
+                                <h3
+                                    class="text-base lg:text-xl font-bold text-zinc-200">ستارگان
+                                    پیشرو</h3>
+                            </div>
+                            <p
+                                class="border-r-2 border-blue-500 pr-5 text-sm leading-6 tracking-tight text-zinc-400">
+                                ارائه بهترین خدمات بیمه و سرمایه‌گذاری با
+                                <span class="text-blue-600 font-bold">۶۸ نوع
+                                    بیمه‌نامه تخصصی</span> و تیم مجرب. همراه
+                                شما در
+                                مسیر امنیت مالی.</p>
+                            <div class="space-x-2">
+                                <span
+                                    class="py-1 px-3 bg-amber-50 text-xs rounded-full border border-amber-200 text-amber-700">رتبه
+                                    برتر بیمه</span>
+                                <span
+                                    class="py-1 px-3 bg-blue-50 text-xs rounded-full border border-blue-200 text-blue-700">۱۴۰۴</span>
+                            </div>
+                        </div>
+                        <!-- Column -->
+                        <div class="space-y-3">
+                            <h3
+                                class="text-base lg:text-xl font-bold text-zinc-200">خدمات
+                                مشتریان</h3>
+                            <ul class="space-y-2 text-sm text-zinc-400">
+                                <li>
+                                    <a href="#"
+                                        class="inline-flex items-center gap-x-1 transition-all hover:text-blue-500 hover:-translate-x-1">
+                                        <svg class="w-3 h-3">
+                                            <use href="#minus"></use>
+                                        </svg>
+                                        <span>پنل کاربری</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="inline-flex items-center gap-x-1 transition-all hover:text-blue-500 hover:-translate-x-1">
+                                        <svg class="w-3 h-3">
+                                            <use href="#minus"></use>
+                                        </svg>
+                                        <span>ثبت سفارش</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="inline-flex items-center gap-x-1 transition-all hover:text-blue-500 hover:-translate-x-1">
+                                        <svg class="w-3 h-3">
+                                            <use href="#minus"></use>
+                                        </svg>
+                                        <span>مشاهده وضعیت</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="inline-flex items-center gap-x-1 transition-all hover:text-blue-500 hover:-translate-x-1">
+                                        <svg class="w-3 h-3">
+                                            <use href="#minus"></use>
+                                        </svg>
+                                        <span>تیکت پشتیبانی</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Column -->
+                        <div class="space-y-3">
+                            <h3
+                                class="text-base lg:text-xl font-bold text-zinc-200">دسترسی
+                                سریع</h3>
+                            <ul class="space-y-2 text-sm  text-zinc-400">
+                                <li>
+                                    <a href="#"
+                                        class="inline-flex items-center gap-x-1 transition-all hover:text-blue-500 hover:-translate-x-1">
+                                        <svg class="w-3 h-3">
+                                            <use href="#minus"></use>
+                                        </svg>
+                                        <span>درباره ما</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="inline-flex items-center gap-x-1 transition-all hover:text-blue-500 hover:-translate-x-1">
+                                        <svg class="w-3 h-3">
+                                            <use href="#minus"></use>
+                                        </svg>
+                                        <span>تماس با ما</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="inline-flex items-center gap-x-1 transition-all hover:text-blue-500 hover:-translate-x-1">
+                                        <svg class="w-3 h-3">
+                                            <use href="#minus"></use>
+                                        </svg>
+                                        <span>قوانین و مقررات</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="inline-flex items-center gap-x-1 transition-all hover:text-blue-500 hover:-translate-x-1">
+                                        <svg class="w-3 h-3">
+                                            <use href="#minus"></use>
+                                        </svg>
+                                        <span>حریم خصوصی</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="inline-flex items-center gap-x-1 transition-all hover:text-blue-500 hover:-translate-x-1">
+                                        <svg class="w-3 h-3">
+                                            <use href="#minus"></use>
+                                        </svg>
+                                        <span>سوالات متداول</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Column -->
+                        <div class="space-y-3">
+                            <h3
+                                class="text-base lg:text-xl font-bold text-zinc-200">شبکه
+                                های اجتماعی</h3>
+                            <div class="flex items-center gap-x-4">
+                                <a href="#"
+                                    class="p-2 rounded-full transition-all hover:-translate-y-1 hover:shadow-lg hover:bg-blue-500 hover:text-blue-400 hover:outline-1 hover:outline-blue-500 hover:outline-offset-2 text-blue-500">
+                                    <svg class="w-5 h-5">
+                                        <use href="#telegram"></use>
+                                    </svg>
+                                </a>
+                                <a href="#"
+                                    class="p-2 rounded-full transition-all hover:-translate-y-1 hover:shadow-lg hover:bg-purple-800 hover:text-purple-400 hover:outline-1 hover:outline-purple-800 hover:outline-offset-2 text-purple-800">
+                                    <svg class="w-5 h-5">
+                                        <use href="#instagram"></use>
+                                    </svg>
+                                </a>
+                                <a href="#"
+                                    class="p-2 rounded-full transition-all hover:-translate-y-1 hover:shadow-lg hover:bg-black hover:text-white hover:outline-1 hover:outline-black hover:outline-offset-2">
+                                    <svg class="w-5 h-5">
+                                        <use href="#twitter"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div
+                                class="mt-5 p-3 rounded-2xl bg-linear-to-br from-white to-blue-50/30 border border-gray-300">
+                                <h5 class="text-sm font-medium">عضویت در
+                                    خبرنامه</h5>
+                                <span
+                                    class="text-xs text-zinc-500 font-light">از
+                                    تخفیف‌های ویژه باخبر شوید</span>
+                                <form class="flex gap-x-2 mt-2">
+                                    <input type="email"
+                                        class="w-full py-2 px-2 border border-gray-200 text-xs rounded-lg bg-white focus:outline-1 focus:outline-blue-500"
+                                        placeholder="ایمیل خود را وارد کنید..."
+                                        required>
+                                    <button
+                                        class="rounded-lg text-white bg-amber-500 px-3 py-0.5 text-sm shadow-lg shadow-amber-500/50">ثبت</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Enamad -->
+                    <div
+                        class="flex flex-col-reverse md:flex-row gap-y-5 justify-between items-center mt-14 pt-10 border-t border-white/10">
+                        <div class="flex text-xs space-x-4">
+                            <span
+                                class="flex items-center gap-x-1 py-1 px-2 rounded-full text-emerald-500 bg-zinc-600">
+                                <svg class="w-3 h-3">
+                                    <use href="#check-circle"></use>
+                                </svg>
+                                <span>نماد اعتماد</span>
+                            </span>
+                            <span
+                                class="flex items-center gap-x-1 py-1 px-2 rounded-full text-emerald-500 bg-zinc-600">
+                                <svg class="w-3 h-3">
+                                    <use href="#check-circle"></use>
+                                </svg>
+                                <span>تظمین کیفیت</span>
+                            </span>
+                            <span
+                                class="flex items-center gap-x-1 py-1 px-2 rounded-full text-emerald-500 bg-zinc-600">
+                                <svg class="w-3 h-3">
+                                    <use href="#check-circle"></use>
+                                </svg>
+                                <span>طراحی مدرن</span>
+                            </span>
+                        </div>
+                        <div
+                            class="shadow-sm p-2 rounded-2xl transition-all hover:shadow-xl bg-white">
+                            <a href="#">
+                                <img src="./images/enamad.png"
+                                    alt="نماد الکترونیکی"
+                                    title="نماد الکترونیکی"
+                                    class="w-15 h-15" loading="lazy">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Copyright -->
+                    <div
+                        class="mt-10 py-8 border-t border-white/10 text-center">
+                        <p class="text-sm  text-zinc-400">© تمامی حقوق برای
+                            ستارگان پیشرو پایدار محفوظ است.</p>
+                    </div>
+                </div>
+            </footer>
+        </main>
+        <div class="overlay"></div>
+
+        <script src="./scripts/app.js"></script>
+    </body>
 
 </html>
