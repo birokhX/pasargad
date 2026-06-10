@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ورود</title>
+    <title>ثبت‌نام</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -353,7 +353,7 @@
     <main>
       <section class="mt-20 px-4">
         <div
-          class="w-full max-w-100 p-5 pb-6 mx-auto rounded-2xl border border-gray-200 shadow-md bg-white"
+          class="w-full max-w-160 p-5 pb-6 mx-auto rounded-2xl border border-gray-200 shadow-md bg-white"
         >
           <!-- Head -->
           <div class="flex justify-between items-center">
@@ -363,7 +363,7 @@
               <!-- <svg class="w-5 h-5">
                 <use href="#login"></use>
               </svg> -->
-              <span>ورود</span>
+              <span>ثبت‌نام</span>
             </h3>
             <a
               href="index.html"
@@ -375,45 +375,71 @@
               </svg>
             </a>
           </div>
+
           <!-- Form -->
           <form x-data="passwordVisible" action="#" class="mt-7 space-y-5">
-            <!-- Email -->
-            <div class="flex flex-col gap-y-2">
-              <label for="" class="text-xs text-gray-700">ایمیل</label>
-              <input
-                type="email"
-                name="email"
-                class="w-full py-2.5 px-4 text-xs bg-white rounded-md outline-none border border-gray-200"
-                placeholder="ایمیل خود را وارد کنید..."
-              />
-            </div>
-            <!-- Password -->
-            <div class="flex flex-col gap-y-2 ">
-              <label for="" class="text-xs text-gray-700">رمزعبور</label>
-              <div
-                class="flex items-center border border-gray-200 rounded-md overflow-hidden"
-              >
-                <!-- Show Password -->
-                <div
-                  @click="toggle()"
-                  class="flex items-center justify-center w-8 py-2 mr-1 bg-gray-50 border border-gray-100 text-gray-500 rounded-md cursor-pointer"
+            <!-- Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <!-- Name/Family -->
+              <div class="flex flex-col gap-y-2">
+                <label for="" class="text-xs text-gray-700"
+                  >نام و نام‌خانوادگی</label
                 >
-                  <svg x-show="!passType" x-cloak class="w-3 h-3 mx-auto">
-                    <use href="#eye"></use>
-                  </svg>
-                  <svg x-show="passType" x-cloak class="w-3 h-3 mx-auto">
-                    <use href="#eye-slash"></use>
-                  </svg>
-                </div>
                 <input
-                  :type="type()"
-                  name="password"
-                  class="w-full py-2.5 px-2.5 text-xs bg-white outline-none"
-                  placeholder="رمزعبور خود را وارد کنید..."
+                  type="text"
+                  name="fullname"
+                  class="w-full py-2.5 px-4 text-xs bg-white rounded-md outline-none border border-gray-200"
+                  placeholder="نام و نام‌خانوادگی خود را وارد کنید..."
                 />
               </div>
+              <!-- Email -->
+              <div class="flex flex-col gap-y-2">
+                <label for="" class="text-xs text-gray-700">ایمیل</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="w-full py-2.5 px-4 text-xs bg-white rounded-md outline-none border border-gray-200"
+                  placeholder="ایمیل خود را وارد کنید..."
+                />
+              </div>
+              <!-- Mobile -->
+              <div class="flex flex-col gap-y-2">
+                <label for="" class="text-xs text-gray-700">شماره تلفن</label>
+                <input
+                  type="text"
+                  name="mobile"
+                  class="w-full py-2.5 px-4 text-xs bg-white rounded-md outline-none border border-gray-200"
+                  placeholder="شماره خود را وارد کنید..."
+                />
+              </div>
+              <!-- Password -->
+              <div class="flex flex-col gap-y-2">
+                <label for="" class="text-xs text-gray-700">رمزعبور</label>
+                <div
+                  class="flex items-center border border-gray-200 rounded-md overflow-hidden"
+                >
+                  <!-- Show Password -->
+                  <span
+                    @click="toggle()"
+                    class="flex items-center justify-center w-8 h-[80%] mr-1 bg-gray-50 border border-gray-100 text-gray-500 rounded-md cursor-pointer"
+                  >
+                    <svg x-show="!passType" x-cloak class="w-3 h-3 mx-auto">
+                      <use href="#eye"></use>
+                    </svg>
+                    <svg x-show="passType" x-cloak class="w-3 h-3 mx-auto">
+                      <use href="#eye-slash"></use>
+                    </svg>
+                  </span>
+                  <input
+                    :type="type()"
+                    name="password"
+                    class="w-full py-2.5 px-2.5 text-xs bg-white outline-none"
+                    placeholder="رمزعبور خود را وارد کنید..."
+                  />
+                </div>
+              </div>
             </div>
-            <!-- Buttons -->
+
             <div class="flex gap-x-5 mt-9">
               <button
                 type="submit"
@@ -422,12 +448,12 @@
                 <svg class="w-4 h-4">
                   <use href="#login"></use>
                 </svg>
-                <span>ورود</span>
+                <span>ثبت‌نام</span>
               </button>
               <a
-                href="signup.html"
+                href="login.html"
                 class="flex items-center justify-center gap-x-1 w-fit py-2 rounded-md text-sm font-light text-center text-blue-500"
-                ><span>ثبت نام</span>
+                ><span>ورود</span>
                 <svg class="w-3 h-3">
                   <use href="#chevron-left"></use>
                 </svg>
