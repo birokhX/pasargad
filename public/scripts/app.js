@@ -2,6 +2,8 @@ const navMobile = document.querySelector(".nav-mobile");
 const openNavMobileBtn = document.querySelector(".open-nav-mobile-btn");
 const closeNavMobileBtn = document.querySelector(".close-nav-mobile-btn");
 const overlay = document.querySelector(".overlay");
+const notification = document.querySelector("#notification");
+const showNotification = document.querySelector("#showNotification");
 
 openNavMobileBtn.addEventListener("click", openNav);
 closeNavMobileBtn.addEventListener("click", closeNav);
@@ -20,6 +22,10 @@ function openNav() {
 }
 overlay.addEventListener("click", closeNav);
 
+// Norification
+showNotification.addEventListener("click", () => {
+  notification.classList.add("notification--visible");
+});
 // Alpine
 document.addEventListener("alpine:init", () => {
   Alpine.data("accordianGroup", () => ({
@@ -63,14 +69,16 @@ document.addEventListener("alpine:init", () => {
       }
     },
 
-   close() {
-        this.closing = true
+    close() {
+      this.closing = true;
+      notification.classList.remove("notification--visible");
 
-        setTimeout(() => {
-            this.open = false
-        }, 300)
-    }
+      setTimeout(() => {
+        this.open = false;
+      }, 300);
+    },
   }));
+
 });
 
 // Swiper

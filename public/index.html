@@ -679,8 +679,8 @@
           </ul>
           <div class="text-sm">
             <a
-              href="#"
-              class="flex items-center gap-x-1 text-white py-3 px-3 shadow-md rounded-full bg-blue-700 transition-all hover:-translate-y-1 hover:shadow-blue-500/50"
+              href="login.html"
+              class="flex items-center gap-x-1 text-white py-3 px-3 shadow-md rounded-full bg-blue-500 transition-all hover:-translate-y-1 hover:shadow-blue-500/50"
             >
               <svg class="w-5 h-5">
                 <use href="#login"></use>
@@ -721,8 +721,8 @@
           </div>
           <!-- Register Button -->
           <a
-            href="#"
-            class="flex items-center gap-x-1 cursor-pointer text-sm text-white py-2 px-3 shadow-lg rounded-full bg-blue-700 transition-all hover:-translate-y-1 hover:shadow-blue-500/50"
+            href="login.html"
+            class="flex items-center gap-x-1 cursor-pointer text-sm text-white py-2 px-3 shadow-lg rounded-full bg-blue-500 transition-all hover:-translate-y-1 hover:shadow-blue-500/50"
           >
             <svg class="w-4 h-4">
               <use href="#login"></use>
@@ -838,11 +838,23 @@
     <!-- Main -->
 
     <main>
+      <div class="fixed bottom-0 left-0 m-5 z-10">
+        <div
+          id="showNotification"
+          class="w-10 h-10 rounded-full overflow-hidden outline-1 outline-orange-950 outline-offset-2 cursor-pointer shadow-lg shadow-orange-600/50"
+        >
+          <img
+            src="./images/avatars/birokh.png"
+            alt="شاهرخ یعقوبی"
+            class="object-cover w-full h-auto"
+          />
+        </div>
+      </div>
       <!-- Notifaction -->
       <div
         x-data="dropdown(true)"
-        x-show="open"
-        class="fixed z-20 inset-0 w-full h-full px-2"
+        id="notification"
+        class="notification"
       >
         <div
           x-show="open"
@@ -852,6 +864,7 @@
         ></div>
         <!-- Modal -->
         <div
+          x-show="open"
           :class="!closing ? 'animate-in fade-in zoom-in duration-300' : 'animate-out fade-out zoom-out duration-300'"
           x-cloak
           class="relative z-10 w-full space-y-5 max-w-120 mx-auto mt-10 p-5 bg-white backdrop-blur-[6px] rounded-2xl shadow-sm"
