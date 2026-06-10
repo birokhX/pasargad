@@ -34,6 +34,7 @@ document.addEventListener("alpine:init", () => {
   //   Dropdown
   Alpine.data("dropdown", (openItem = false) => ({
     open: openItem,
+    closing: false,
     communicationCard: false,
     communicationItem: null,
 
@@ -62,10 +63,13 @@ document.addEventListener("alpine:init", () => {
       }
     },
 
-    close() {
-      this.open = false;
-      document.body.classList.remove("overflow-hidden");
-    },
+   close() {
+        this.closing = true
+
+        setTimeout(() => {
+            this.open = false
+        }, 300)
+    }
   }));
 });
 

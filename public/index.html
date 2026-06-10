@@ -847,14 +847,13 @@
         <div
           x-show="open"
           x-cloak
-          x-transition
           @click="close()"
           class="fixed inset-0 z-10 w-full h-full bg-black/40 backdrop-blur-[6px]"
         ></div>
         <!-- Modal -->
         <div
-          x-show="open"
-          x-transition
+          :class="!closing ? 'animate-in fade-in zoom-in duration-300' : 'animate-out fade-out zoom-out duration-300'"
+          x-cloak
           class="relative z-10 w-full space-y-5 max-w-120 mx-auto mt-10 p-5 bg-white backdrop-blur-[6px] rounded-2xl shadow-sm"
         >
           <!-- Close Btn -->
@@ -891,7 +890,11 @@
                 <span>مسیرهای ارتباطی</span>
               </h4>
               <!-- Icons -->
-              <div :class="communicationCard === true ? 'invisible' : 'visible'" x-cloak class="relative flex gap-x-7 w-fit mx-auto">
+              <div
+                :class="communicationCard === true ? 'invisible' : 'visible'"
+                x-cloak
+                class="relative flex gap-x-7 w-fit mx-auto"
+              >
                 <!-- Telegram -->
                 <button
                   class="relative w-7 h-7 flex items-center justify-center text-blue-400"
