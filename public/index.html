@@ -19,6 +19,36 @@
 
   <body>
     <svg class="hidden">
+      <!-- Linkdin -->
+      <symbol
+        id="linkdin"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        data-name="Layer 1"
+      >
+        <path
+          d="M20.47,2H3.53A1.45,1.45,0,0,0,2.06,3.43V20.57A1.45,1.45,0,0,0,3.53,22H20.47a1.45,1.45,0,0,0,1.47-1.43V3.43A1.45,1.45,0,0,0,20.47,2ZM8.09,18.74h-3v-9h3ZM6.59,8.48h0a1.56,1.56,0,1,1,0-3.12,1.57,1.57,0,1,1,0,3.12ZM18.91,18.74h-3V13.91c0-1.21-.43-2-1.52-2A1.65,1.65,0,0,0,12.85,13a2,2,0,0,0-.1.73v5h-3s0-8.18,0-9h3V11A3,3,0,0,1,15.46,9.5c2,0,3.45,1.29,3.45,4.06Z"
+        />
+      </symbol>
+      <!-- graduation-cap -->
+      <symbol
+        id="graduation-cap"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-graduation-cap-icon lucide-graduation-cap"
+      >
+        <path
+          d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"
+        />
+        <path d="M22 10v6" />
+        <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
+      </symbol>
       <symbol
         id="at-sign"
         xmlns="http://www.w3.org/2000/svg"
@@ -776,7 +806,10 @@
               <use href="#chevron-left"></use>
             </svg>
           </a>
-          <a href="managers.html" class="flex items-center justify-between gap-x-1">
+          <a
+            href="managers.html"
+            class="flex items-center justify-between gap-x-1"
+          >
             <span class="flex items-center gap-x-2">
               <svg class="w-4 h-4">
                 <use href="#user-shield"></use>
@@ -851,11 +884,7 @@
         </div>
       </div>
       <!-- Notifaction -->
-      <div
-        x-data="dropdown(true)"
-        id="notification"
-        class="notification"
-      >
+      <div x-data="dropdown(true)" id="notification" class="notification">
         <div
           x-show="open"
           x-cloak
@@ -1349,221 +1378,303 @@
               سکانداران اعتماد — متخصصان با سابقه و تعهد به رضایت شما
             </p>
           </div>
-          <!-- Carts/Swiper -->
+          <!-- Swiper -->
           <div class="swiper js-swiper" data-type="managers">
             <div class="swiper-wrapper">
-              <!-- Cart -->
+              <!-- Item 1 -->
               <div class="swiper-slide">
                 <div
-                  class="pb-4 bg-white border border-gray-200 rounded-2xl overflow-hidden"
+                  class="p-5 bg-gray-800 text-white border border-gray-200 rounded-2xl"
                 >
-                  <!-- Cart Header -->
-                  <div class="relative h-20 md:h-20">
+                  <!-- Head -->
+                  <div class="flex items-start gap-5 mb-5">
                     <div
-                      class="absolute top-1/2 mx-auto left-0 right-0 w-fit bg-white p-1 rounded-2xl overflow-hidden"
+                      class="flex items-center justify-center w-20 h-20 rounded-2xl bg-blue-700"
                     >
-                      <img
-                        src="./images/avatars/person-1.jpg"
-                        alt
-                        class="w-20 h-20 md:w-20 md:h-20 object-cover rounded-2xl"
-                      />
+                      <h3 class="text-3xl text-white font-bold">م.ح</h3>
+                    </div>
+                    <div class="">
+                      <h5 class="text-xl font-medium mb-1">محمد حسینی</h5>
+                      <span
+                        class="py-0.5 px-2 text-xs font-medium text-blue-400/90 border border-blue-400/40 bg-blue-400/19 rounded-full"
+                        >مدیرعامل</span
+                      >
                     </div>
                   </div>
-                  <div class="h-10"></div>
-                  <!-- Cart Content -->
-                  <div class="mt-5 space-y-4 px-4">
-                    <div class>
-                      <h3
-                        class="font-bold text-lg md:text-xl text-center text-gray-800"
+                  <!-- Body -->
+                  <div class="pb-5 border-b border-white/10">
+                    <p class="mb-5 text-sm text-gray-300">
+                      بیش از ۲۵ سال تجربه در صنعت بیمه و مدیریت ارشد شرکت‌های
+                      معتبر.
+                    </p>
+                    <span class="flex items-center gap-x-2 text-gray-300">
+                      <svg class="w-4 h-4">
+                        <use href="#graduation-cap"></use>
+                      </svg>
+                      <span class="text-xs"
+                        >PhD مدیریت بیمه - دانشگاه تهران
+                      </span>
+                    </span>
+                  </div>
+                  <!-- Footer -->
+                  <div class="flex items-center justify-between mt-7">
+                    <a
+                      href="managers.html"
+                      class="inline-flex items-center gap-x-1 py-2 px-4 text-sm rounded-xl text-zinc-800 bg-amber-400"
+                    >
+                      <span>رزومه</span>
+                      <svg class="w-5 h-5">
+                        <use href="#chevron-left"></use>
+                      </svg>
+                    </a>
+                    <div class="flex gap-x-3">
+                      <a
+                        href="#"
+                        class="flex items-center justify-center w-8 h-8 transition-all hover:bg-blue-600 hover:text-white hover:shadow-lg hover:shadow-blue-500/50 rounded-md bg-gray-700 text-gray-300"
                       >
-                        دکتر احمد کریمی
-                      </h3>
-                      <span
-                        class="w-fit block py-0.5 px-2 text-xs mx-auto mt-2 text-blue-600 rounded-full bg-blue-50 border border-blue-200"
-                        >مدیر ارشد اجرایی</span
+                        <svg class="w-4.5 h-4.5">
+                          <use href="#linkdin"></use>
+                        </svg>
+                      </a>
+                      <a
+                        href="#"
+                        class="flex items-center justify-center w-8 h-8 transition-all hover:bg-red-600 hover:text-white hover:shadow-lg hover:shadow-red-500/50 rounded-md bg-gray-700 text-gray-300"
                       >
-                    </div>
-                    <div class>
-                      <p class="text-xs text-center text-gray-600">
-                        بیش از<span class="font-bold"> ۲۰ سال</span> تجربه در
-                        صنعت بیمه و سرمایه
-                      </p>
-                    </div>
-                    <div class="flex items-center gap-x-4 mt-8">
-                      <button
-                        class="w-full bg-blue-500 py-2 rounded-xl cursor-pointer text-white text-xs md:text-sm"
-                      >
-                        مشاهده رزومه
-                      </button>
-                      <button
-                        class="py-2 px-3 shrink-0 cursor-pointer text-gray-700 bg-gray-50 border border-gray-200 rounded-xl"
-                      >
-                        <svg class="w-5 h-5">
+                        <svg class="w-4.5 h-4.5">
                           <use href="#mail"></use>
                         </svg>
-                      </button>
+                      </a>
+                      <a
+                        href="#"
+                        class="flex items-center justify-center w-8 h-8 transition-all hover:bg-green-600 hover:text-white hover:shadow-lg hover:shadow-green-500/50 rounded-md bg-gray-700 text-gray-300"
+                      >
+                        <svg class="w-4.5 h-4.5">
+                          <use href="#phone"></use>
+                        </svg>
+                      </a>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Cart -->
+              <!-- Item 2 -->
               <div class="swiper-slide">
                 <div
-                  class="pb-4 bg-white border border-gray-200 rounded-2xl overflow-hidden"
+                  class="p-5 bg-gray-800 text-white border border-gray-200 rounded-2xl"
                 >
-                  <!-- Cart Header -->
-                  <div class="relative h-20 md:h-20">
+                  <!-- Head -->
+                  <div class="flex items-start gap-5 mb-5">
                     <div
-                      class="absolute top-1/2 mx-auto left-0 right-0 w-fit bg-white p-1 rounded-2xl overflow-hidden"
+                      class="flex items-center justify-center w-20 h-20 rounded-2xl bg-amber-400"
                     >
-                      <img
-                        src="./images/avatars/person-2.jpg"
-                        alt
-                        class="w-20 h-20 md:w-20 md:h-20 object-cover rounded-2xl"
-                      />
+                      <h3 class="text-3xl text-white font-bold">ز.ک</h3>
+                    </div>
+                    <div class="">
+                      <h5 class="text-xl font-medium mb-1">زهرا کریمی</h5>
+                      <span
+                        class="py-0.5 px-2 text-xs font-medium text-amber-400/90 border border-amber-400/40 bg-amber-400/19 rounded-full"
+                        >معاون فنی</span
+                      >
                     </div>
                   </div>
-                  <div class="h-10"></div>
-                  <!-- Cart Content -->
-                  <div class="mt-5 space-y-4 px-4">
-                    <div class>
-                      <h3
-                        class="font-bold text-lg md:text-xl text-center text-gray-800"
+                  <!-- Body -->
+                  <div class="pb-5 border-b border-white/10">
+                    <p class="mb-5 text-sm text-gray-300">
+                      متخصص طراحی محصولات نوین بیمه‌ای با سابقه در شرکت‌های بین‌المللی.
+                    </p>
+                    <span class="flex items-center gap-x-2 text-gray-300">
+                      <svg class="w-4 h-4">
+                        <use href="#graduation-cap"></use>
+                      </svg>
+                      <span class="text-xs"
+                        >MBA بازرگانی - دانشگاه شریف
+                      </span>
+                    </span>
+                  </div>
+                  <!-- Footer -->
+                  <div class="flex items-center justify-between mt-7">
+                    <a
+                      href="managers.html"
+                      class="inline-flex items-center gap-x-1 py-2 px-4 text-sm rounded-xl text-zinc-800 bg-amber-400"
+                    >
+                      <span>رزومه</span>
+                      <svg class="w-5 h-5">
+                        <use href="#chevron-left"></use>
+                      </svg>
+                    </a>
+                    <div class="flex gap-x-3">
+                      <a
+                        href="#"
+                        class="flex items-center justify-center w-8 h-8 transition-all hover:bg-blue-600 hover:text-white hover:shadow-lg hover:shadow-blue-500/50 rounded-md bg-gray-700 text-gray-300"
                       >
-                        دکتر احمد کریمی
-                      </h3>
-                      <span
-                        class="w-fit block py-0.5 px-2 text-xs mx-auto mt-2 text-blue-600 rounded-full bg-blue-50 border border-blue-200"
-                        >مدیر ارشد اجرایی</span
+                        <svg class="w-4.5 h-4.5">
+                          <use href="#linkdin"></use>
+                        </svg>
+                      </a>
+                      <a
+                        href="#"
+                        class="flex items-center justify-center w-8 h-8 transition-all hover:bg-red-600 hover:text-white hover:shadow-lg hover:shadow-red-500/50 rounded-md bg-gray-700 text-gray-300"
                       >
-                    </div>
-                    <div class>
-                      <p class="text-xs text-center text-gray-600">
-                        بیش از<span class="font-bold"> ۲۰ سال</span> تجربه در
-                        صنعت بیمه و سرمایه
-                      </p>
-                    </div>
-                    <div class="flex items-center gap-x-4 mt-8">
-                      <button
-                        class="w-full bg-blue-500 py-2 rounded-xl cursor-pointer text-white text-xs md:text-sm"
-                      >
-                        مشاهده رزومه
-                      </button>
-                      <button
-                        class="py-2 px-3 shrink-0 cursor-pointer text-gray-700 bg-gray-50 border border-gray-200 rounded-xl"
-                      >
-                        <svg class="w-5 h-5">
+                        <svg class="w-4.5 h-4.5">
                           <use href="#mail"></use>
                         </svg>
-                      </button>
+                      </a>
+                      <a
+                        href="#"
+                        class="flex items-center justify-center w-8 h-8 transition-all hover:bg-green-600 hover:text-white hover:shadow-lg hover:shadow-green-500/50 rounded-md bg-gray-700 text-gray-300"
+                      >
+                        <svg class="w-4.5 h-4.5">
+                          <use href="#phone"></use>
+                        </svg>
+                      </a>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Cart -->
+              <!-- Item 3 -->
               <div class="swiper-slide">
                 <div
-                  class="pb-4 bg-white border border-gray-200 rounded-2xl overflow-hidden"
+                  class="p-5 bg-gray-800 text-white border border-gray-200 rounded-2xl"
                 >
-                  <!-- Cart Header -->
-                  <div class="relative h-20 md:h-20">
+                  <!-- Head -->
+                  <div class="flex items-start gap-5 mb-5">
                     <div
-                      class="absolute top-1/2 mx-auto left-0 right-0 w-fit bg-white p-1 rounded-2xl overflow-hidden"
+                      class="flex items-center justify-center w-20 h-20 pb-2 rounded-2xl bg-emerald-500"
                     >
-                      <img
-                        src="./images/avatars/person-3.jpg"
-                        alt
-                        class="w-20 h-20 md:w-20 md:h-20 object-cover rounded-2xl"
-                      />
+                      <h3 class="text-3xl text-white font-bold">ع.ر</h3>
+                    </div>
+                    <div class="">
+                      <h5 class="text-xl font-medium mb-1">علی رضایی</h5>
+                      <span
+                        class="py-0.5 px-2 text-xs font-medium text-emerald-400/90 border border-emerald-400/40 bg-emerald-400/19 rounded-full"
+                        >مدیر مالی</span
+                      >
                     </div>
                   </div>
-                  <div class="h-10"></div>
-                  <!-- Cart Content -->
-                  <div class="mt-5 space-y-4 px-4">
-                    <div class>
-                      <h3
-                        class="font-bold text-lg md:text-xl text-center text-gray-800"
+                  <!-- Body -->
+                  <div class="pb-5 border-b border-white/10">
+                    <p class="mb-5 text-sm text-gray-300">
+                      خبره در مدیریت استراتژیک مالی و سرمایه‌گذاری‌های کلان شرکت.
+                    </p>
+                    <span class="flex items-center gap-x-2 text-gray-300">
+                      <svg class="w-4 h-4">
+                        <use href="#graduation-cap"></use>
+                      </svg>
+                      <span class="text-xs"
+                        >CPA حسابرسی - دانشگاه شهید بهشتی
+                      </span>
+                    </span>
+                  </div>
+                  <!-- Footer -->
+                  <div class="flex items-center justify-between mt-7">
+                    <a
+                      href="managers.html"
+                      class="inline-flex items-center gap-x-1 py-2 px-4 text-sm rounded-xl text-zinc-800 bg-amber-400"
+                    >
+                      <span>رزومه</span>
+                      <svg class="w-5 h-5">
+                        <use href="#chevron-left"></use>
+                      </svg>
+                    </a>
+                    <div class="flex gap-x-3">
+                      <a
+                        href="#"
+                        class="flex items-center justify-center w-8 h-8 transition-all hover:bg-blue-600 hover:text-white hover:shadow-lg hover:shadow-blue-500/50 rounded-md bg-gray-700 text-gray-300"
                       >
-                        دکتر احمد کریمی
-                      </h3>
-                      <span
-                        class="w-fit block py-0.5 px-2 text-xs mx-auto mt-2 text-blue-600 rounded-full bg-blue-50 border border-blue-200"
-                        >مدیر ارشد اجرایی</span
+                        <svg class="w-4.5 h-4.5">
+                          <use href="#linkdin"></use>
+                        </svg>
+                      </a>
+                      <a
+                        href="#"
+                        class="flex items-center justify-center w-8 h-8 transition-all hover:bg-red-600 hover:text-white hover:shadow-lg hover:shadow-red-500/50 rounded-md bg-gray-700 text-gray-300"
                       >
-                    </div>
-                    <div class>
-                      <p class="text-xs text-center text-gray-600">
-                        بیش از<span class="font-bold"> ۲۰ سال</span> تجربه در
-                        صنعت بیمه و سرمایه
-                      </p>
-                    </div>
-                    <div class="flex items-center gap-x-4 mt-8">
-                      <button
-                        class="w-full bg-blue-500 py-2 rounded-xl cursor-pointer text-white text-xs md:text-sm"
-                      >
-                        مشاهده رزومه
-                      </button>
-                      <button
-                        class="py-2 px-3 shrink-0 cursor-pointer text-gray-700 bg-gray-50 border border-gray-200 rounded-xl"
-                      >
-                        <svg class="w-5 h-5">
+                        <svg class="w-4.5 h-4.5">
                           <use href="#mail"></use>
                         </svg>
-                      </button>
+                      </a>
+                      <a
+                        href="#"
+                        class="flex items-center justify-center w-8 h-8 transition-all hover:bg-green-600 hover:text-white hover:shadow-lg hover:shadow-green-500/50 rounded-md bg-gray-700 text-gray-300"
+                      >
+                        <svg class="w-4.5 h-4.5">
+                          <use href="#phone"></use>
+                        </svg>
+                      </a>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Cart -->
+              <!-- Item 4 -->
               <div class="swiper-slide">
                 <div
-                  class="pb-4 bg-white border border-gray-200 rounded-2xl overflow-hidden"
+                  class="p-5 bg-gray-800 text-white border border-gray-200 rounded-2xl"
                 >
-                  <!-- Cart Header -->
-                  <div class="relative h-20 md:h-20">
+                  <!-- Head -->
+                  <div class="flex items-start gap-5 mb-5">
                     <div
-                      class="absolute top-1/2 mx-auto left-0 right-0 w-fit bg-white p-1 rounded-2xl overflow-hidden"
+                      class="flex items-center justify-center w-20 h-20 pb-2 rounded-2xl bg-purple-700"
                     >
-                      <img
-                        src="./images/avatars/person-4.jpg"
-                        alt
-                        class="w-20 h-20 md:w-20 md:h-20 object-cover rounded-2xl"
-                      />
+                      <h3 class="text-3xl text-white font-bold">و.ا</h3>
+                    </div>
+                    <div class="">
+                      <h5 class="text-xl font-medium mb-1">وحید ایمانی</h5>
+                      <span
+                        class="py-0.5 px-2 text-xs font-medium text-purple-400/90 border border-purple-400/40 bg-purple-400/19 rounded-full"
+                        >معاون اجرایی</span
+                      >
                     </div>
                   </div>
-                  <div class="h-10"></div>
-                  <!-- Cart Content -->
-                  <div class="mt-5 space-y-4 px-4">
-                    <div class>
-                      <h3
-                        class="font-bold text-lg md:text-xl text-center text-gray-800"
+                  <!-- Body -->
+                  <div class="pb-5 border-b border-white/10">
+                    <p class="mb-5 text-sm text-gray-300">
+                      بیش از ۲۵ سال تجربه در صنعت بیمه و مدیریت ارشد شرکت‌های
+                      معتبر.
+                    </p>
+                    <span class="flex items-center gap-x-2 text-gray-300">
+                      <svg class="w-4 h-4">
+                        <use href="#graduation-cap"></use>
+                      </svg>
+                      <span class="text-xs"
+                        >PhD مدیریت بیمه - دانشگاه تهران
+                      </span>
+                    </span>
+                  </div>
+                  <!-- Footer -->
+                  <div class="flex items-center justify-between mt-7">
+                    <a
+                      href="managers.html"
+                      class="inline-flex items-center gap-x-1 py-2 px-4 text-sm rounded-xl text-zinc-800 bg-amber-400"
+                    >
+                      <span>رزومه</span>
+                      <svg class="w-5 h-5">
+                        <use href="#chevron-left"></use>
+                      </svg>
+                    </a>
+                    <div class="flex gap-x-3">
+                      <a
+                        href="#"
+                        class="flex items-center justify-center w-8 h-8 transition-all hover:bg-blue-600 hover:text-white hover:shadow-lg hover:shadow-blue-500/50 rounded-md bg-gray-700 text-gray-300"
                       >
-                        دکتر احمد کریمی
-                      </h3>
-                      <span
-                        class="w-fit block py-0.5 px-2 text-xs mx-auto mt-2 text-blue-600 rounded-full bg-blue-50 border border-blue-200"
-                        >مدیر ارشد اجرایی</span
+                        <svg class="w-4.5 h-4.5">
+                          <use href="#linkdin"></use>
+                        </svg>
+                      </a>
+                      <a
+                        href="#"
+                        class="flex items-center justify-center w-8 h-8 transition-all hover:bg-red-600 hover:text-white hover:shadow-lg hover:shadow-red-500/50 rounded-md bg-gray-700 text-gray-300"
                       >
-                    </div>
-                    <div class>
-                      <p class="text-xs text-center text-gray-600">
-                        بیش از<span class="font-bold"> ۲۰ سال</span> تجربه در
-                        صنعت بیمه و سرمایه
-                      </p>
-                    </div>
-                    <div class="flex items-center gap-x-4 mt-8">
-                      <button
-                        class="w-full bg-blue-500 py-2 rounded-xl cursor-pointer text-white text-xs md:text-sm"
-                      >
-                        مشاهده رزومه
-                      </button>
-                      <button
-                        class="py-2 px-3 shrink-0 cursor-pointer text-gray-700 bg-gray-50 border border-gray-200 rounded-xl"
-                      >
-                        <svg class="w-5 h-5">
+                        <svg class="w-4.5 h-4.5">
                           <use href="#mail"></use>
                         </svg>
-                      </button>
+                      </a>
+                      <a
+                        href="#"
+                        class="flex items-center justify-center w-8 h-8 transition-all hover:bg-green-600 hover:text-white hover:shadow-lg hover:shadow-green-500/50 rounded-md bg-gray-700 text-gray-300"
+                      >
+                        <svg class="w-4.5 h-4.5">
+                          <use href="#phone"></use>
+                        </svg>
+                      </a>
                     </div>
                   </div>
                 </div>
