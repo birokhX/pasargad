@@ -1,2 +1,7 @@
 node_modules
-public/qwen.html
+public/*.html
+
+!public/index.html
+!public/managers.html
+!public/login.html
+!public/signup.html
