@@ -37,9 +37,7 @@
   html {
     font-family: var(--font-vazir);
   }
-  body {
-    @apply bg-slate-50;
-  }
+  
 
   /* Thin */
   @font-face {
