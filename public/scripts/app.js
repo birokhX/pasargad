@@ -38,7 +38,7 @@ document.addEventListener("alpine:init", () => {
     },
   }));
   //   Dropdown
-  Alpine.data("dropdown", (openItem = false) => ({
+  Alpine.data("dropdownCircle", (openItem = false) => ({
     open: openItem,
     closing: false,
     communicationCard: false,
@@ -78,7 +78,15 @@ document.addEventListener("alpine:init", () => {
       }, 300);
     },
   }));
-
+  Alpine.data("dropdown", (status = false) => ({
+    open: status,
+    toggle() {
+      this.open = !this.open;
+    },
+    close() {
+      this.open = false;
+    },
+  }));
 });
 
 // Swiper
@@ -87,6 +95,7 @@ document.querySelectorAll(".js-swiper").forEach((element) => {
   if (type === "managers") {
     new Swiper(element, {
       slidesPerView: 1,
+      spaceBetween: 15,
       loop: true,
       autoplay: true,
       breakpoints: {
