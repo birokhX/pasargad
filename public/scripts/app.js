@@ -116,6 +116,10 @@ document.querySelectorAll(".js-swiper").forEach((element) => {
           spaceBetween: 20,
         },
       },
+      navigation: {
+        nextEl: ".swiper-button-next-managers",
+        prevEl: ".swiper-button-prev-managers",
+      },
     });
   }
 });
