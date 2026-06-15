@@ -37,7 +37,8 @@
   html {
     font-family: var(--font-vazir);
   }
-  
+  body{
+  }  
 
   /* Thin */
   @font-face {
@@ -134,16 +135,8 @@
 @utility notification--visible {
   @apply opacity-100 visible;
 }
-@utility hero-pattern {
-  background-image: radial-gradient(
-    circle at 10% 20%,
-    rgba(255, 255, 240, 0.05) 1.5px,
-    transparent 1.5px
-  );
-  background-size: 24px 24px;
-}
 @utility section-title {
-  @apply text-2xl md:text-4xl mt-2 md:mt-4 font-bold text-zinc-800;
+  @apply text-2xl md:text-4xl mt-2 md:mt-4 font-bold text-zinc-700;
 }
 @utility section-label {
   @apply flex items-center gap-x-2 w-fit px-3 py-2 mb-4 rounded-full text-sm font-medium text-blue-600 bg-blue-50 border border-blue-200;

@@ -28,6 +28,16 @@ showNotification.addEventListener("click", () => {
 });
 // Alpine
 document.addEventListener("alpine:init", () => {
+  // TabMenu
+  Alpine.data("tabmenu", () => ({
+    activeItem: 1,
+    toggle(id) {
+      this.activeItem = id;
+    },
+    isOpen(id) {
+      return this.activeItem === id;
+    },
+  }));
   Alpine.data("accordianGroup", () => ({
     activeItem: null,
     toggle(id) {
